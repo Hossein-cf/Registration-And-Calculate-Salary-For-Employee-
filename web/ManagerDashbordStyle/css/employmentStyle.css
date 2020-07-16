@@ -12,7 +12,6 @@
 
 }
 
-
 .custom-select select {
     display: none; /*hide original SELECT element: */
 }
@@ -218,4 +217,21 @@ input.invalid {
     font: 800 0.95rem/0 "Raleway" , sans-serif;
     text-decoration: none;
     transition: all 0.2s;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+
+    text-align: center;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }

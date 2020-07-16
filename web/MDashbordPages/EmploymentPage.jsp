@@ -18,32 +18,31 @@
 
 <section id="sideMenu">
     <nav>
-        <a class="a-side" href="#"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../ManagerDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
             DashBord</a>
-        <a class="a-side" href="#"><i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
+                                                                      aria-hidden="true"></i>
             Employment</a>
         <a class="a-side" href="#"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Issuance Receipt</a>
         <a class="a-side" href="#"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Daily Records</a>
-        <a class="a-side" href="#"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
             Company Members</a>
     </nav>
 </section>
 
 <header>
     <div class="search-area">
-        search icon
-        <input id="search-input" type="text" name="" value="">
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
     </div>
-    <div class="user-area">
-        <a class="a-header" href="#">+add</a>
-        <a class="a-header" href="#">bell<span>3</span></a>
-        <a class="a-header" href="#">
-            <div class="user-image"></div>
-            down icon
-        </a>
-    </div>
+
+
 </header>
 
 <section class="pane-1-e">
@@ -158,15 +157,22 @@
         <div class="tab">
             <fieldset>
                 <legend>Extras</legend>
-                <p><label class="choice"> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
-                <p><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access </label></p>
-                <p><label class="choice"> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
+                <p><label class="choice"> <input type="checkbox" name="extras" value="baby"> Git </label></p>
+                <p><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Tele Working </label></p>
+                <p><label class="choice"> <input type="checkbox" name="extras" value="tip"> Mac/Linux </label></p>
             </fieldset>
         </div>
 
-        <div class="tab">
 
-        </div>
+        <table class="tab">
+            <tr class="tbl">
+                <th style="width: 500px; ">Specialty</th>
+                <th style="width: 500px; ">Choose</th>
+            </tr>
+
+        </table>
+
+
 
         <div style="margin-top: 30px">
             <div style="float:right;">
@@ -189,6 +195,12 @@
 
 <script src="../ManagerDashbordStyle/js/EmploymentScript.js"></script>
 
+<script>
+    var FullStack = ["Saab", "Volvo", "BMW"];
+
+
+
+</script>
 
 </body>
 </html>
