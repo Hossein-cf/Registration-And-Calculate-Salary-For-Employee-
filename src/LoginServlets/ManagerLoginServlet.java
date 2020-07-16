@@ -1,5 +1,7 @@
 package LoginServlets;
 
+import javax.jws.WebService;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +17,7 @@ public class ManagerLoginServlet extends HttpServlet {
 
 
 
-            resp.sendRedirect("ManagerLoginJSP.jsp");
+
 
     }
 
@@ -24,6 +26,18 @@ public class ManagerLoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
+        String user = req.getParameter("userName");
+        String pass = req.getParameter("pass");
+        if(user.equals("123456") && pass.equals("123456")) {
+            RequestDispatcher view = req.getRequestDispatcher("ManagerDashbord.jsp");
+            view.forward(req,resp);
+            resp.sendRedirect("ManagerDashbord.jsp");
+        }
+        else {
+            RequestDispatcher view = req.getRequestDispatcher("ManagerLoginJSP.jsp");
+            view.forward(req,resp);
+            resp.sendRedirect("ManagerLoginJSP.jsp");
+        }
 
     }
 }

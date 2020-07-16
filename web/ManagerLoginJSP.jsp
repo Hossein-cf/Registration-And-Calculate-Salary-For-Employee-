@@ -38,7 +38,7 @@
                 <img src="./ManagerLoginStyle/images/img-01.png" alt="IMG">
             </div>
 
-            <form  class="login100-form validate-form" action=>
+            <form name="loginForm" action="ManagerLoginServlet" method="post" class="login100-form validate-form">
 					<span class="login100-form-title">
 						Login as Employment Manager
 					</span>
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" >
+                    <button class="login100-form-btn">
                         Login
                     </button>
                 </div>

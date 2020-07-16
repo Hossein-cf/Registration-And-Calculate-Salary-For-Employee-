@@ -1,0 +1,237 @@
+.custom-select {
+    margin-left: 15px;
+    top: 5px;
+    bottom: 50px;
+    position: relative;
+    font-family: Arial;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+.Gender{
+    margin-right: 10px;
+
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+
+.pane-1-e{
+    margin-left: 300px;
+    margin-top: 50px;
+    background: white;
+    width: 1350px;
+    height: 700px;
+    border-radius: 5px;
+
+
+}
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+}
+
+/* Style the input fields */
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+
+.tab {
+    display: none;
+}
+.tab-1{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+.tab-2-fieldset{
+    height: 100px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #4CAF50;
+}
+.row_1{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.col-6{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.mb-1, .my-1 {
+    margin-bottom: .25rem!important;
+}
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+.test{
+
+    display: table;
+    margin-bottom: 50px;
+}
+.test-address{
+
+
+    margin-bottom: 50px;
+}
+
+.t{
+    display: table-cell;
+    padding-right: 50px;
+}
+.next-button{
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+
+
+
+.btn-solid-lg {
+    display: inline-block;
+    padding: 1.375rem 1.375rem 1.375rem 1.375rem;
+    border: 0.125rem solid #00bfd8;
+    border-radius: 2rem;
+    background-color: #00bfd8;
+    color: #fff;
+    font: 800 0.95rem/0 "Raleway" , sans-serif;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+
+    text-align: center;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
