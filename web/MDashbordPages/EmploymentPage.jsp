@@ -155,12 +155,28 @@
         </div>
 
         <div class="tab">
-            <fieldset>
-                <legend>Extras</legend>
-                <p><label class="choice"> <input type="checkbox" name="extras" value="baby"> Git </label></p>
-                <p><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Tele Working </label></p>
-                <p><label class="choice"> <input type="checkbox" name="extras" value="tip"> Mac/Linux </label></p>
-            </fieldset>
+
+
+            <label class="container">One
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Two
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Four
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
         </div>
 
 

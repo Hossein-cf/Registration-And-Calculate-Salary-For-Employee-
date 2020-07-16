@@ -25,17 +25,14 @@
 <body>
 <section id="sideMenu">
     <nav>
+
         <a class="a-side" href="../ManagerDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
             DashBord</a>
-        <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
-                                                                      aria-hidden="true"></i>
-            Employment</a>
         <a class="a-side" href="#"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
-            Issuance Receipt</a>
+            Receipt</a>
         <a class="a-side" href="#"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
-            Daily Records</a>
-        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
-            Company Members</a>
+            attendance</a>
+
     </nav>
 </section>
 
@@ -66,62 +63,13 @@
         </h1>
         <br>
         <p>
-            here is your salary Management System Dashbord,you can use the side bar in the left, to go to different part of Application ,that if you want to know more about their functions click on the HELP in
-            navigation bar on top of the page .
+            Employee
         </p>
 
     </div>
 </section>
 
-<section class="pane-1">
-    <div class="row-in-pane">
-
-        <div class="inline-row-1">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="./ManagerDashbordStyle/pics/Company.jpg" alt="Avatar" style="width:300px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>Company Name:</h1>
-                        <p>Unknown</p>
-                        <h1>Company type:</h1>
-                        <p>Private</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="inline-row-1">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="./ManagerDashbordStyle/pics/flat.png" alt="Avatar" style="width:300px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1></h1>
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="inline-row-1">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="./ManagerDashbordStyle/pics/TeamPics.png" alt="Avatar" style="width:300px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>Developer Team:</h1>
-                        <p>Back end: Hossein Shakeri & Ali EsaZadeh</p>
-                        <p>Front End:Ghader Salehi</p>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section >
 
 
 </section>
