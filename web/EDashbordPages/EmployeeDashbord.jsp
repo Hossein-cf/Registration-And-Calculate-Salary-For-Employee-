@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Extra.GenerateEmployeeNumber" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/16/2020
@@ -82,9 +82,7 @@
 
             <div class="inline-row-1" style="width: 600px;">
                 <div class="ED-pane">
-                    <h1>
-                        hh
-                    </h1>
+
 
 
                 </div>

@@ -36,20 +36,12 @@
 <header>
     <div class="search-area">
 
-        <%--        <input id="search-input" type="text" name="" value="">--%>
-        <%--    </div>--%>
-        <%--    <div class="user-area">--%>
-        <%--        <a class="a-header" href="#"></a>--%>
-        <%--        <a class="a-header" href="#"><span></span></a>--%>
-        <%--        <a class="a-header" href="#">--%>
-        <%--            <div class="user-image"></div>--%>
 
-        <%--        </a>--%>
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">Help</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a class="active" href="./index.html">Home</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+            <a href="./ManagerLoginJSP.jsp">Log out</a>
         </div>
     </div>
 </header>

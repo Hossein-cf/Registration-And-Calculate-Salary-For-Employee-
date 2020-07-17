@@ -1,5 +1,6 @@
 <%@ page import="Extra.employeeTypes.DB_Expert" %>
-<%@ page import="Extra.employeeTypes.Back_End" %><%--
+<%@ page import="Extra.employeeTypes.Back_End" %>
+<%@ page import="Extra.GenerateEmployeeNumber" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/7/2020
@@ -53,7 +54,7 @@
 <section class="pane-1-e">
 
 
-    <form id="regForm" action="${pageContext.request.contextPath}/EmploymentPage" method="post">
+    <form id="regForm" action="">
 
         <h1>Complete information about the Employee</h1>
 
@@ -63,7 +64,7 @@
             <%--            <p><input placeholder="Last name..." oninput="this.className = ''"></p>--%>
             <div class="tab-1">
                 <div class="custom-select" style="width:200px;">
-                    <select id="EType" name="EType">
+                    <select id="EType">
                         <option value="0">Employee Type :</option>
                         <option value="1">Data Base Expert</option>
                         <option value="2">Net Work Security Expert</option>
@@ -117,7 +118,11 @@
 
             <div class="test">
                 <div class="t">
-                    <input style="width: 200px" name="firstName" placeholder="Born palce" type="text"/>
+                    <input style="width: 200px" name="Born" placeholder="Born palce" type="text"/>
+                </div>
+
+                <div class="t">
+                    <input style="width: 100px;padding-right: 10px" name="Age" placeholder="Age" type="text"/>
                 </div>
 
                 <div class="t">
@@ -153,7 +158,27 @@
                 </div>
 
             </div>
+            <div class="test">
+                <div class="t">
+                    <input style="width: 300px" name="HomePhoneNumber" placeholder="Home Phone Number" type="text"/>
 
+                </div>
+                <div class="t">
+                    <div class="custom-select" style="width:200px;">
+                        <select>
+                            <option value="0">marital status :</option>
+                            <option value="1">Married</option>
+                            <option value="2">Single</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="t">
+
+                    <input style="width: 200px;padding-right: 20px" name="number of children" placeholder="number of Children" type="text"/>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -233,7 +258,6 @@
 </section>
 
 <script src="../ManagerDashbordStyle/js/EmploymentScript.js"></script>
-
 <script>
 
 
@@ -324,7 +348,28 @@
     }
 
 </script>
+<script>
 
+    function nextPrev(n) {
+
+        var x = document.getElementsByClassName("tab");
+
+        if (n === 1 && !validateForm()) return false;
+        x[currentTab].style.display = "none";
+        currentTab = currentTab + n;
+        if (currentTab >= x.length) {
+
+            alert("Employee Code : "+<%= GenerateEmployeeNumber.generateNumber()%>);
+            document.getElementById("regForm").submit();
+
+            return false;
+
+        }
+
+        showTab(currentTab);
+    }
+
+</script>
 
 </body>
 </html>

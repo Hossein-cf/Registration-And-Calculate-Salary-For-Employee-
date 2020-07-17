@@ -30,10 +30,7 @@
     <!--===============================================================================================-->
 </head>
 <body>
-<c:forEach  var="valore" items="${requestScope.message}" varStatus="theCount">//message is the key to pass the ArrayList "lista" to this jsp page.
-    <a href ="./es3"> <c:out value="${valore}"/> </a>
-    <a id="${theCount.index}"></a>
-</c:forEach>
+
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
@@ -41,7 +38,7 @@
                 <img src="./ManagerLoginStyle/images/img-01.png" alt="IMG">
             </div>
 
-            <form name="login to employee" action="EmployeeLoginServlet" method="post" class="login100-form validate-form">
+            <form name="EmployeeLogin" action="EmployeeLoginServlet" method="post" class="login100-form validate-form">
 					<span class="login100-form-title">
 						Login as Employee
 					</span>
@@ -63,10 +60,10 @@
                 </div>
 
                 <div  class="container-login100-form-btn">
-                    <button  class="login100-form-btn">
+                    <button  class="login100-form-btn" >
                         Login
                     </button>
-                    <a href="./EDashbordPages/EmployeeDashbord.jsp"> sgo</a>
+
 
                 </div>
 
