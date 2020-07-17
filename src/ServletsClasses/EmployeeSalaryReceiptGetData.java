@@ -1,4 +1,4 @@
-package Extra.employeeTypes;
+package ServletsClasses;
 
 import Extra.*;
 
