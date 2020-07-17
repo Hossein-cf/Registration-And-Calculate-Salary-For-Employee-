@@ -7,7 +7,7 @@ public class GenerateEmployeeNumber {
         String number ;
         Random  random = new Random();
         number = "9819"+random.nextInt(899999);
-        System.out.println(number);
+//        System.out.println(number);
 
         return number;
     }

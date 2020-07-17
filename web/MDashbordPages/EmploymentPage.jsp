@@ -54,7 +54,7 @@
 <section class="pane-1-e">
 
 
-    <form id="regForm" action="">
+    <form id="regForm" action="${pageContext.request.contextPath}/EmploymentPage" method="post">
 
         <h1>Complete information about the Employee</h1>
 
@@ -64,7 +64,7 @@
             <%--            <p><input placeholder="Last name..." oninput="this.className = ''"></p>--%>
             <div class="tab-1">
                 <div class="custom-select" style="width:200px;">
-                    <select id="EType">
+                    <select id="EType" name="EType">
                         <option value="0">Employee Type :</option>
                         <option value="1">Data Base Expert</option>
                         <option value="2">Net Work Security Expert</option>
@@ -74,7 +74,7 @@
                     </select>
                 </div>
                 <div class="custom-select" style="width:200px;">
-                    <select name="ELevel">
+                    <select name="ELevel" id="ELevel">
                         <option value="0">Employee Level :</option>
                         <option value="1">Junior</option>
                         <option value="2">Mid_level</option>
@@ -83,7 +83,7 @@
                     </select>
                 </div>
                 <div class="custom-select" style="width:200px;">
-                    <select name="WorkTime">
+                    <select name="WorkTime" id="WorkTime">
                         <option value="0">Work Time :</option>
                         <option value="1">Full time(8-20)</option>
                         <option value="2">Morning work(8-14)</option>
@@ -103,31 +103,31 @@
             <br>
             <div class="test">
                 <div class="t">
-                    <input name="firstName" placeholder="First Name" type="text"/>
+                    <input name="firstName" id="firstName" placeholder="First Name" type="text"/>
                 </div>
                 <div class="t">
-                    <input name="lastName" placeholder="Last Name" type="text"/>
+                    <input name="lastName" id="lastName" placeholder="Last Name" type="text"/>
                 </div>
                 <div class="t">
-                    <input name="FatherName" placeholder="Father Name" type="text"/>
+                    <input name="FatherName" id="FatherName" placeholder="Father Name" type="text"/>
                 </div>
                 <div style="width: 300px" class="t">
-                    <input name="NationalCode" placeholder="National Code" type="text"/>
+                    <input name="NationalCode" id="NationalCode" placeholder="National Code" type="text"/>
                 </div>
             </div>
 
             <div class="test">
                 <div class="t">
-                    <input style="width: 200px" name="Born" placeholder="Born palce" type="text"/>
+                    <input style="width: 200px" name="Born" id="Born" placeholder="Born palce" type="text"/>
                 </div>
 
                 <div class="t">
-                    <input style="width: 100px;padding-right: 10px" name="Age" placeholder="Age" type="text"/>
+                    <input style="width: 100px;padding-right: 10px" name="Age" id="Age" placeholder="Age" type="text"/>
                 </div>
 
                 <div class="t">
-                    <div class="custom-select Gender" id="Gender"   style="width:200px;margin-right: 10px;">
-                        <select name="Gender">
+                    <div class="custom-select Gender"  style="width:200px;margin-right: 10px;">
+                        <select name="Gender" id="Gender">
                             <option value="0">Gender :</option>
                             <option value="1">Male</option>
                             <option value="2">FeMale</option>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="t">
                     <div class="custom-select" style="width:200px;">
-                        <select name="ELevelOfEducation" >
+                        <select name="ELevelOfEducation" id="ELevelOfEducation" >
                             <option value="0">Level of Eduction :</option>
                             <option value="1">Diploma</option>
                             <option value="2">Bachelor</option>
@@ -146,26 +146,26 @@
                 </div>
             </div>
             <div class="test-address">
-                <p><input name="Address" placeholder="Address" oninput="this.className = ''"></p>
+                <p><input name="Address" id="Address" placeholder="Address" oninput="this.className = ''"></p>
             </div>
             <div class="test">
                 <div class="t">
-                    <input style="width: 300px" name="PostalCode" placeholder="Postal Code" type="text"/>
+                    <input style="width: 300px" name="PostalCode" id="PostalCode" placeholder="Postal Code" type="text"/>
 
                 </div>
                 <div class="t">
-                    <input style="width: 500px" name="PhoneNumber" placeholder="Phone Number" type="text"/>
+                    <input style="width: 500px" name="PhoneNumber" id="PhoneNumber" placeholder="Phone Number" type="text"/>
                 </div>
 
             </div>
             <div class="test">
                 <div class="t">
-                    <input style="width: 300px" name="HomePhoneNumber" placeholder="Home Phone Number" type="text"/>
+                    <input style="width: 300px" name="HomePhoneNumber" id="HomePhoneNumber" placeholder="Home Phone Number" type="text"/>
 
                 </div>
                 <div class="t">
                     <div class="custom-select" style="width:200px;">
-                        <select>
+                        <select name="marital status" id="marital status">
                             <option value="0">marital status :</option>
                             <option value="1">Married</option>
                             <option value="2">Single</option>
@@ -174,7 +174,7 @@
                 </div>
                 <div class="t">
 
-                    <input style="width: 200px;padding-right: 20px" name="number of children" placeholder="number of Children" type="text"/>
+                    <input style="width: 200px;padding-right: 20px" name="number of children" id="number of children" placeholder="number of Children" type="text"/>
 
                 </div>
 
@@ -193,7 +193,7 @@
                         <label>Git</label>
                     </div>
                     <div class="c2">
-                        <input type="checkbox">
+                        <input type="checkbox" name="Git" id="Git">
                     </div>
 
 
@@ -206,7 +206,7 @@
                         <label>Telle Working</label>
                     </div>
                     <div class="c2">
-                        <input type="checkbox">
+                        <input type="checkbox" name="Telle Working" id="Telle Working">
                     </div>
 
 
@@ -218,7 +218,7 @@
                         <label>Mac/Linux</label>
                     </div>
                     <div class="c2">
-                        <input type="checkbox">
+                        <input type="checkbox" name="Mac/Linux" id="Mac/Linux">
                     </div>
 
 
@@ -230,8 +230,8 @@
 
         <table id="spcTable" class="tab">
             <tr class="tbl" >
-                <th style="width: 500px; ">Specialty</th>
-                <th style="width: 500px; ">Choose</th>
+                <th id="Specialty" style="width: 500px; " >Specialty</th>
+                <th id="Choose" style="width: 500px; ">Choose</th>
             </tr>
 
         </table>

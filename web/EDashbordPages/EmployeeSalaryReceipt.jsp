@@ -18,15 +18,18 @@
 <body>
 <section id="sideMenu" style="width: 275px">
     <nav>
-        <a class="a-side" href="../EDashbordPages/EmployeeDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../EDashbordPages/EmployeeDashbord.jsp"><i class="fa fa-tachometer fa-2x"
+                                                                           aria-hidden="true"></i>
             DashBord
         </a>
 
-        <a class="a-side" href="../EDashbordPages/EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../EDashbordPages/EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x"
+                                                                                aria-hidden="true"></i>
             Salary Receipt
         </a>
 
-        <a class="a-side" href="../EDashbordPages/EmployeeAtendence.jsp"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../EDashbordPages/EmployeeAtendence.jsp"><i class="fa fa-check-square-o fa-2x"
+                                                                            aria-hidden="true"></i>
             Attendance
         </a>
 
@@ -80,6 +83,7 @@
                             <label for="fname"> Full Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="">
                             <label for="email"> Employee Code</label>
+
                             <input type="text" id="email" name="email" placeholder="">
                             <label for="adr"> Address</label>
                             <input type="text" id="adr" name="address" placeholder="">
@@ -152,7 +156,6 @@
     </div>
 
 
-
 </section>
 
 
@@ -169,14 +172,15 @@
     </div>
 </section>
 
+
 <script>
     var today = new Date();
 
-    var time = today.getHours() + ":" + today.getMinutes() ;
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes();
+    var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
 
-    document.getElementById("time").innerHTML = date +"  /  "+ time;
+    document.getElementById("time").innerHTML = date + "  /  " + time;
 </script>
 
 
