@@ -28,12 +28,11 @@
         <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
                                                                          aria-hidden="true"></i>
             Employment</a>
-        <a class="a-side" href="#"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Issuance Receipt</a>
-        <a class="a-side" href="#"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Daily Records</a>
-        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x"
-                                                                              aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
             Company Members</a>
     </nav>
 </section>
@@ -134,8 +133,9 @@
                     <div class="custom-select" style="width:200px;">
                         <select>
                             <option value="0">Level of Eduction :</option>
-                            <option value="1">Male</option>
-                            <option value="2">Gender</option>
+                            <option value="1">Diploma</option>
+                            <option value="2">Bachelor</option>
+                            <option value="3">MA</option>
                         </select>
                     </div>
                 </div>
@@ -238,42 +238,87 @@
 
     function CreateRows() {
 
-        var flg = x;
-        flg = false;
+
         var  tbl = document.getElementById("spcTable");
 
         var ET = document.getElementById("EType");
-        console.log("1");
-        if( ET.selectedIndex=== 1){
 
-            var index = <%=  DB_Expert.values().length %>;
-            console.log(index);
-            console.log("1");
-            <% int i = DB_Expert.values().length;  %>
-            for (let i = 0; i < index ; i++) {
+        if( ET.selectedIndex=== 1){
+            var spc = ["DataBaseImplementationAndDesign","Bottleneck","BackupAndRecovery","SQL","Replication","dataBaseAdministration","backUpAndRecovery","clustering"];
+            for (let i = 0; i < spc.length ; i++) {
                 var row = tbl.insertRow();
                 var cell1 = row.insertCell();
                 var cell2 = row.insertCell();
-<%--                <%String s =Back_End.values()[0].toString();System.out.println(s);%>--%>
-<%--                cell1.innerHTML=(<%=s%>);--%>
-
-<%--                <% i++ ;%>--%>
-                cell1.innerHTML="dsds";
+                cell1.innerHTML=spc[i];
                 var chk = document.createElement('input');
                 chk.setAttribute('type','checkbox');
                 chk.setAttribute('id','chek'+i);
                 chk.setAttribute('name','chek'+i);
                 cell2.appendChild(chk);
             }
-
-
-
-
-
-
+            tbl.setAttribute('id','sd');
+        }
+        else if(ET.selectedIndex=== 2){
+            var spc = ["UTM","ISMS","PLC","CEH","CISSP","CCNA","QOD","HAIPE_IP","MPLS"];
+            for (let i = 0; i < spc.length ; i++) {
+                var row = tbl.insertRow();
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell();
+                cell1.innerHTML=spc[i];
+                var chk = document.createElement('input');
+                chk.setAttribute('type','checkbox');
+                chk.setAttribute('id','chek'+i);
+                chk.setAttribute('name','chek'+i);
+                cell2.appendChild(chk);
+            }
+            tbl.setAttribute('id','sd');
+        }
+        else if(ET.selectedIndex=== 3){
+            var spc = ["CSS","JS","reactJs","jQuery","mobilePrograming","python","ruby","nodeJs","PHP7","ASP_NET","webServer","SQLServer","oracleDatabase","xamarin","security","docker"];
+            for (let i = 0; i < spc.length ; i++) {
+                var row = tbl.insertRow();
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell();
+                cell1.innerHTML=spc[i];
+                var chk = document.createElement('input');
+                chk.setAttribute('type','checkbox');
+                chk.setAttribute('id','chek'+i);
+                chk.setAttribute('name','chek'+i);
+                cell2.appendChild(chk);
+            }
+            tbl.setAttribute('id','sd');
+        }
+        else if(ET.selectedIndex=== 4){
+            var spc = ["CSS","JS","XHTR","HTMLDOM","JAVAScript","ReactJs","Angular","VueJs","jQuery","TypeScript","ES6","yarn","npm","CSSResponsive","json","ajax","materialDesign","bootStrap","W3Css"];
+            for (let i = 0; i < spc.length ; i++) {
+                var row = tbl.insertRow();
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell();
+                cell1.innerHTML=spc[i];
+                var chk = document.createElement('input');
+                chk.setAttribute('type','checkbox');
+                chk.setAttribute('id','chek'+i);
+                chk.setAttribute('name','chek'+i);
+                cell2.appendChild(chk);
+            }
+            tbl.setAttribute('id','sd');
+        }
+        else if(ET.selectedIndex=== 5){
+            var spc = ["python","ruby","node_JS","PHP7","ASP_NET","webServer","SQLServer","OracleDatabase","RestfulAPIs","Security","Docker"];
+            for (let i = 0; i < spc.length ; i++) {
+                var row = tbl.insertRow();
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell();
+                cell1.innerHTML=spc[i];
+                var chk = document.createElement('input');
+                chk.setAttribute('type','checkbox');
+                chk.setAttribute('id','chek'+i);
+                chk.setAttribute('name','chek'+i);
+                cell2.appendChild(chk);
+            }
+            tbl.setAttribute('id','sd');
         }
 
-        tbl.setAttribute('id','sd');
 
     }
 

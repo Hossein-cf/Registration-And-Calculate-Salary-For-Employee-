@@ -24,11 +24,11 @@
         <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
                                                                          aria-hidden="true"></i>
             Employment</a>
-        <a class="a-side" href="#"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Issuance Receipt</a>
-        <a class="a-side" href="#"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Daily Records</a>
-        <a class="a-side" href="#"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
             Company Members</a>
     </nav>
 </section>
@@ -51,6 +51,10 @@
 
         <p>
             " You can calculate final Salary of Employee that works a month in your Company "       </p>
+
+        <p>
+            " Search the Employee by Employee Code and Fill the blanks  "
+        </p>
 
     </div>
 </section>
@@ -96,7 +100,7 @@
 
     </div>
 
-
+<hr>
 </section>
 
 <section class="pane-1-members">
@@ -109,43 +113,37 @@
 
             <div class="col-75">
                 <div class="container">
-                    <form >
+                    <form  name="IssuanceReceipt" action="Receipt.jsp">
 
                         <div class="row">
-                            <div class="col-50">
+                            <div class="issu">
 
-
-                                <div class="row">
-                                    <div class="col-50">
+                                    <div class="col-50" >
                                         <label for="state">Over Time</label>
-                                        <input type="text" id="state" name="state" placeholder=".">
+                                        <input style="width: 200px" type="text" id="state" name="state" placeholder=".">
                                     </div>
+
                                     <div class="col-50">
                                         <label for="zip">Vacation </label>
-                                        <input type="text" id="zip" name="zip" placeholder=".">
+                                        <input  style="width: 200px"  type="text" id="zip" name="zip" placeholder=".">
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="col-50">
 
 
 
-                                <div class="row">
-                                    <div class="col-50" style="width: 300px">
+
+
+                                    <div class="col-50" >
                                         <label for="expyear">Absence Days</label>
-                                        <input style="width: 300px" type="text" id="expyear" name="expyear" placeholder=".">
+                                        <input  style="width: 200px"   type="text" id="expyear" name="expyear" placeholder=".">
                                     </div>
 
-                                </div>
+
                             </div>
 
                         </div>
 
-                        <input style="width: 300px;margin-left: 500px;" type="submit" value="Continue to show Receipt"  class="btn">
-                        <a href="Receipt.jsp">
-                            go
-                        </a>
+                        <input style="width: 250px;margin-left: 470px;margin-top: 50px" type="submit" value="Continue to show Receipt"   class="btn">
+
                     </form>
                 </div>
             </div>

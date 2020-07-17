@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.Date" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
+<%@ page import="java.time.LocalDateTime" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/3/2020
@@ -56,11 +58,11 @@
 <section class="content-area">
     <div class="heading">
         <h1>
-            <span class="turquoise"></span>
+            <span class="turquoise">This is Employee Salary Receipt after a month  </span>
         </h1>
         <br>
         <p class="txt-style">
-
+           your Final Salary Calculated based on Employee Over time , vacation hours and ...
         </p>
 
     </div>
@@ -99,7 +101,10 @@
                         </div>
 
                         <div class="col-50">
-                            <h3>Date</h3>
+                            <h3 id="time">
+
+
+                            </h3>
 
 
                             <label for="baseSalary">Base Salary</label>
@@ -108,8 +113,10 @@
                             <input type="text" id="overtime" name="overtime" placeholder="">
                             <label for="deducted"> deducted amount</label>
                             <input type="text" id="deducted" name="deducted" placeholder="">
+                            <label for="deducted"> deducted amount</label>
+                            <input type="text" id="deducted1" name="deducted" placeholder="">
 
-                            <div class="row">
+                            <div class="row" style="margin-top: 20px">
                                 <div class="col-50">
                                     <label for="experience">Added amount for work experience</label>
                                     <input type="text" id="experience" name="experience" placeholder="">
@@ -163,6 +170,16 @@
 
     </div>
 </section>
+
+<script>
+    var today = new Date();
+
+    var time = today.getHours() + ":" + today.getMinutes() ;
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+
+    document.getElementById("time").innerHTML = date +"  /  "+ time;
+</script>
 
 
 </body>

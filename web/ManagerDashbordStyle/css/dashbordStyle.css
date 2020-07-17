@@ -124,6 +124,7 @@ header{
 .search-part{
     position: center;
     margin-left: 300px;
+    margin-top: 30px;
 
 }
 .search-part-form{
@@ -157,6 +158,12 @@ header{
     margin-top: 20px;
 
 
+}
+.ED-pane{
+    margin-left: 50px;
+    width: 600px;
+    height: 300px;
+    text-align: left;
 }
 .first-pane{
 
@@ -425,11 +432,20 @@ form.example::after {
 }
 
 .col-25,
-.col-50,
 .col-75 {
-    padding: 0 16px;
-}
 
+
+
+}
+.col-50{
+    padding-right: 100px;
+    padding-left: 100px;
+    display: table-cell;
+}
+.issu{
+    display: table;
+
+}
 .container {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
@@ -482,6 +498,7 @@ span.price {
 @media (max-width: 800px) {
     .row {
         flex-direction: column-reverse;
+
     }
     .col-25 {
         margin-bottom: 20px;
