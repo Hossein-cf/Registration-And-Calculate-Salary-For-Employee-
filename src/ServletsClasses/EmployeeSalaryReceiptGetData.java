@@ -11,6 +11,7 @@ public class EmployeeSalaryReceiptGetData {
     Employee employee = dbHelper.readEmployee(employeeNumber);
     JobInformation jobInformation = employee.getJobInformation();
     SalaryInformation salaryInformation = employee.getSalaryInformation();
+
     String fullName = employee.getName()+employee.getLastName();
     String employeeCode = employeeNumber;
     String address = employee.getAddress();
@@ -21,4 +22,39 @@ public class EmployeeSalaryReceiptGetData {
     String addAmountForWorkSalary = String.valueOf(Integer.parseInt(receipt.get(receipt.size()-1).getYearSalary())-Integer.parseInt(salaryInformation.getBaseSalary()));
     String employeeType = jobInformation.getEmployeeType();
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getEmployeeCode() {
+        return employeeCode;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getBaseSalary() {
+        return baseSalary;
+    }
+
+    public String getFinalSalary() {
+        return finalSalary;
+    }
+
+    public String getWorkTime() {
+        return workTime;
+    }
+
+    public String getOverTimeWork() {
+        return overTimeWork;
+    }
+
+    public String getAddAmountForWorkSalary() {
+        return addAmountForWorkSalary;
+    }
+
+    public String getEmployeeType() {
+        return employeeType;
+    }
 }

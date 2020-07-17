@@ -1,4 +1,4 @@
-<%--
+<%@ page import="ServletsClasses.EmployeeSalaryReceiptGetData" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/16/2020
@@ -77,55 +77,57 @@
             <div class="container">
                 <form action="">
 
+                    <%EmployeeSalaryReceiptGetData data = new EmployeeSalaryReceiptGetData();%>
+
                     <div class="row">
                         <div class="col-50">
                             <h3>Your Last receipt</h3>
                             <label for="fname"> Full Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="">
+                            <input type="text" id="fname" name="firstname" placeholder="" value="<%out.print(data.getFullName());%>">
                             <label for="email"> Employee Code</label>
 
-                            <input type="text" id="email" name="email" placeholder="">
+                            <input type="text" id="email" name="email" placeholder="" value="<%out.print(data.getEmployeeCode());%>">
                             <label for="adr"> Address</label>
-                            <input type="text" id="adr" name="address" placeholder="">
+                            <input type="text" id="adr" name="address" placeholder="" value="<%out.print(data.getAddress());%>">
                             <label for="city"> Woking Time</label>
-                            <input type="text" id="city" name="city" placeholder="">
+                            <input type="text" id="city" name="city" placeholder="" value="<%out.print(data.getWorkTime());%>">
 
                             <div class="row">
                                 <div class="col-50">
                                     <label for="job">Job in Company</label>
-                                    <input type="text" id="job" name="job" placeholder="">
+                                    <input type="text" id="job" name="job" placeholder="" value="<%out.print("job");%>">//todo
                                 </div>
                                 <div class="col-50">
                                     <label for="level">Employee Level</label>
-                                    <input type="text" id="level" name="level" placeholder="">
+                                    <input type="text" id="level" name="level" placeholder="" value="<%out.print("Level");%>">//todo
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-50">
                             <h3 id="time">
-
+                                <%out.print("Time");%>//todo
 
                             </h3>
 
 
                             <label for="baseSalary">Base Salary</label>
-                            <input type="text" id="baseSalary" name="baseSalary" placeholder="">
+                            <input type="text" id="baseSalary" name="baseSalary" placeholder="" value="<%out.print(data.getBaseSalary());%>">
                             <label for="overtime">amount of over time</label>
-                            <input type="text" id="overtime" name="overtime" placeholder="">
+                            <input type="text" id="overtime" name="overtime" placeholder="" value="<%out.print("amount of overtime Work");%>">//todo
                             <label for="deducted"> deducted amount</label>
-                            <input type="text" id="deducted" name="deducted" placeholder="">
+                            <input type="text" id="deducted" name="deducted" placeholder="" value="<%out.print("deducted amount");%>">//todo
                             <label for="deducted"> deducted amount</label>
-                            <input type="text" id="deducted1" name="deducted" placeholder="">
+                            <input type="text" id="deducted1" name="deducted" placeholder="" value="<%out.print("deducated amount");%>">//todo
 
                             <div class="row" style="margin-top: 20px">
                                 <div class="col-50">
                                     <label for="experience">Added amount for work experience</label>
-                                    <input type="text" id="experience" name="experience" placeholder="">
+                                    <input type="text" id="experience" name="experience" placeholder="" value="<%out.print(data.getAddAmountForWorkSalary());%>">
                                 </div>
                                 <div class="col-50">
                                     <label for="FinalSalary">Final Salary</label>
-                                    <input type="text" id="FinalSalary" name="FinalSalary" placeholder="">
+                                    <input type="text" id="FinalSalary" name="FinalSalary" placeholder="" value="<%out.print(data.getFinalSalary());%>">
                                 </div>
                             </div>
                         </div>
