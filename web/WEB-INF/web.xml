@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 <!--    <servlet>-->
-<!--        <servlet-name>MDash</servlet-name>-->
-<!--        <servlet-class>LoginServlets.ManagerDshbordServlet</servlet-class>-->
+<!--        <servlet-name>EmployeeLoginServlet</servlet-name>-->
+<!--        <servlet-class>ServletsClasses.EmployeeLoginServlet</servlet-class>-->
 <!--    </servlet>-->
 
 <!--    <servlet-mapping>-->
-<!--        <servlet-name>MDash</servlet-name>-->
-<!--        <url-pattern>/ManagerDash</url-pattern>-->
+<!--        <servlet-name>EmployeeLoginServlet</servlet-name>-->
+<!--        <url-pattern>/EmployeeLoginServlet</url-pattern>-->
 <!--    </servlet-mapping>-->
 
 </web-app>
