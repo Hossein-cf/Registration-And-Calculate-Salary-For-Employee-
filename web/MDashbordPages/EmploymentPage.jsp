@@ -1,4 +1,5 @@
-<%--
+<%@ page import="Extra.employeeTypes.DB_Expert" %>
+<%@ page import="Extra.employeeTypes.Back_End" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/7/2020
@@ -207,7 +208,7 @@
                 <th style="width: 500px; ">Specialty</th>
                 <th style="width: 500px; ">Choose</th>
             </tr>
-            <a  href="#" onclick="CreateRows();" > gfgfng</a>
+
         </table>
 
 
@@ -233,21 +234,46 @@
 
 <script src="../ManagerDashbordStyle/js/EmploymentScript.js"></script>
 <script>
+
+
     function CreateRows() {
+
+        var flg = x;
+        flg = false;
         var  tbl = document.getElementById("spcTable");
 
         var ET = document.getElementById("EType");
-
+        console.log("1");
         if( ET.selectedIndex=== 1){
-            var row = tbl.insertRow();
-            var cell1 = row.insertCell();
-            var cell2 = row.insertCell();
 
-            cell1.innerHTML ="jbh,ck"
-            cell1.innerHTML ="jbh,ck"
+            var index = <%=  DB_Expert.values().length %>;
+            console.log(index);
+            console.log("1");
+            <% int i = DB_Expert.values().length;  %>
+            for (let i = 0; i < index ; i++) {
+                var row = tbl.insertRow();
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell();
+<%--                <%String s =Back_End.values()[0].toString();System.out.println(s);%>--%>
+<%--                cell1.innerHTML=(<%=s%>);--%>
+
+<%--                <% i++ ;%>--%>
+                cell1.innerHTML="dsds";
+                var chk = document.createElement('input');
+                chk.setAttribute('type','checkbox');
+                chk.setAttribute('id','chek'+i);
+                chk.setAttribute('name','chek'+i);
+                cell2.appendChild(chk);
+            }
+
+
+
+
+
+
         }
 
-
+        tbl.setAttribute('id','sd');
 
     }
 
