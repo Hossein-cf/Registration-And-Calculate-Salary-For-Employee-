@@ -1,7 +1,7 @@
 package Extra;
 
 public enum EmployeeLevel {
-    Junior((byte) 1),Mid_level((byte)1),Senior((byte)3);
+    Junior((byte) 1),Mid_level((byte)2),Senior((byte)3);
 
     private final byte value;
 

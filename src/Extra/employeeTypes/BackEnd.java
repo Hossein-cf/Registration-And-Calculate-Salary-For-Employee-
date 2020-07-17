@@ -205,7 +205,7 @@ public class BackEnd implements CalculationSalary {
                 if(score>60) baseSalary = 3200000;
                 if(workTime.equals("full time")) baseSalary = 3700000;
 
-        } else if (level.equals("Mid-level")&& score > 50) {
+        } else if (level.equals("Mid_level")&& score > 50) {
 
                 baseSalary = 4000000;
 

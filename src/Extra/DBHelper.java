@@ -66,12 +66,12 @@ public class DBHelper {
     }
 
     private int insertPerson(Person person) {
-        String query = "INSERT INTO tblPersonalInformation ( [Name], [LastName], [FatherName], [NamtionalNumber], [BornPlace], [BornTime], [Address], [PostalCode], [PhoneNumber], [HomePhoneNumber], [Marriage], [Gender], [NumberOfChidren])VALUES ('" + person.getName() + "','" + person.getLastName() + "','" + person.getFatherName() + "','" + person.getNationalNumber() + "','" + person.getBirthPlace() + "','" + person.getBirthTime() + "','" + person.getAddress() + "','" + person.getPostalCode() + "','" + person.getPhoneNumber() + "','" + person.getHomePhoneNumber() + "','" + person.isMarriage() + "','" + person.getGender() + "','" + person.getNumberOfChild() + "'); ";
+        String query = "INSERT INTO tblPersonalInformation ( [Name], [LastName], [FatherName], [NationalNumber], [BornPlace], [BornTime1], [Address], [PostalCode], [PhoneNumber], [HomePhoneNumber], [Marriage], [Gender], [NumberOfChildren],[BornTime])VALUES ('" + person.getName() + "','" + person.getLastName() + "','" + person.getFatherName() + "','" + person.getNationalNumber() + "','" + person.getBirthPlace() + "','" + person.getBirthTime() + "','" + person.getAddress() + "','" + person.getPostalCode() + "','" + person.getPhoneNumber() + "','" + person.getHomePhoneNumber() + "','" + person.isMarriage() + "','" + person.getGender() + "','" + person.getNumberOfChild() + "','"+new Date(2,2,2) +"'); ";
         isConnectionToTheDB();
         int IDPerson = 0;
         try {
             statement.executeUpdate(query);
-            query = "SELECT ID from tblPersonalInformation where [NamtionalNumber] = '" + person.getNationalNumber() + "';";
+            query = "SELECT ID from tblPersonalInformation where [NationalNumber] = '" + person.getNationalNumber() + "';";
 
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next())
@@ -213,7 +213,7 @@ public class DBHelper {
                 person.setPostalCode(resultSet.getString("PostalCode"));
                 person.setNationalNumber(resultSet.getLong("NationalNumber"));
                 person.setBirthPlace(resultSet.getString("BornPlace"));
-                person.setBirthTime(resultSet.getString("BornTime"));
+                person.setBirthTime(resultSet.getString("BornTime1"));
                 person.setHomePhoneNumber(resultSet.getString("HomePhoneNumber"));
                 person.setMarriage(resultSet.getBoolean("Marriage"));
                 person.setGender(resultSet.getString("Gender"));
@@ -345,7 +345,7 @@ public class DBHelper {
         return null;
     }
 
-    //TODO UPDATE TO THE DB//////////////////////////////////////////////////////////////////////////////////////////
+    // UPDATE TO THE DB//////////////////////////////////////////////////////////////////////////////////////////
     public boolean updateEmployee(Employee employee) {
         String query = "SELECT * from tblEmployee where EmployeeNumber = '"+employee.getEmployeeNumber()+"';";
         int IDPerson=0;
@@ -375,7 +375,7 @@ public class DBHelper {
     }
 
     private boolean updatePerson(Person person, int ID) {
-        String query = "UPDATE tblEmployee set [Name] = '"+person.getName()+"', [LastName]='"+person.getLastName()+"', [FatherName]='"+person.getFatherName()+"', [NamtionalNumber]='"+person.getNationalNumber()+"', [BornPlace]='"+person.getBirthPlace()+"', [BornTime]='"+person.getBirthTime()+"', [Address]='"+person.getAddress()+"', [PostalCode]='"+person.getPostalCode()+"', [PhoneNumber]='"+person.getPhoneNumber()+"', [HomePhoneNumber]='"+person.getHomePhoneNumber()+"', [Marriage]='"+person.isMarriage()+"', [Gender]='"+person.getGender()+"', [NumberOfChidren]='"+person.getNumberOfChild()+"';";
+        String query = "UPDATE tblEmployee set [Name] = '"+person.getName()+"', [LastName]='"+person.getLastName()+"', [FatherName]='"+person.getFatherName()+"', [NamtionalNumber]='"+person.getNationalNumber()+"', [BornPlace]='"+person.getBirthPlace()+"', [BornTime1]='"+person.getBirthTime()+"', [Address]='"+person.getAddress()+"', [PostalCode]='"+person.getPostalCode()+"', [PhoneNumber]='"+person.getPhoneNumber()+"', [HomePhoneNumber]='"+person.getHomePhoneNumber()+"', [Marriage]='"+person.isMarriage()+"', [Gender]='"+person.getGender()+"', [NumberOfChidren]='"+person.getNumberOfChild()+"';";
         isConnectionToTheDB();
         try {
             statement.executeUpdate(query);

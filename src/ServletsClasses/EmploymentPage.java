@@ -26,7 +26,10 @@ public class EmploymentPage extends HttpServlet {
         employee.setLastName(req.getParameter("lastName"));
         employee.setFatherName(req.getParameter("FatherName"));
         employee.setNationalNumber(Long.parseLong(req.getParameter("NationalCode")));
-        employee.setGender(Gender.valueOf(req.getParameter("Gender")).name());
+        System.out.println();
+        if (req.getParameter("Gender").equals("1"))
+        employee.setGender(Gender.Male.name());
+        else employee.setGender(Gender.Female.name());
         employee.setPostalCode(req.getParameter("PostalCode"));
         employee.setPhoneNumber(req.getParameter("PhoneNumber"));
         employee.setAddress(req.getParameter("Address"));
@@ -41,7 +44,14 @@ public class EmploymentPage extends HttpServlet {
         employee.setNumberOfChild(Integer.parseInt(req.getParameter("number of children")));
 
 
-        employee.setEmployeeLevel(EmployeeLevel.valueOf(req.getParameter("ELevelOfEducation")).name());
+        if(req.getParameter("ELevelOfEducation").equals("2"))
+            employee.setEmployeeLevel(EmployeeLevel.Mid_level.name());
+        else if(req.getParameter("ELevelOfEducation").equals("1"))
+            employee.setEmployeeLevel(EmployeeLevel.Junior.name());
+        else
+            employee.setEmployeeLevel(EmployeeLevel.Senior.name());
+
+
         JobInformation jobInformation = new JobInformation();
         SalaryInformation salaryInformation = new SalaryInformation();
         if (req.getParameter("WorkTime").equals("2"))
@@ -117,7 +127,7 @@ public class EmploymentPage extends HttpServlet {
             String[] skills = {"python", "ruby", "node_JS", "PHP7", "ASP_NET", "webServer", "SQLServer", "OracleDatabase", "RestfulAPIs", "Security", "Docker"};
             for (int i = 0; i < 11; i++) {
                 if (values[i] != null)
-                    Score += DB_Expert.valueOf(skills[i]).value;
+                    Score += Back_End.valueOf(skills[i]).getValue();
             }
         } else if (EmployeeType == Extra.employeeTypes.EmployeeType.FrontEnd.getValue()) {
             String values[] = new String[19];
@@ -127,7 +137,7 @@ public class EmploymentPage extends HttpServlet {
             String[] skills = {"CSS", "JS", "XHTR", "HTMLDOM", "JAVAScript", "ReactJs", "Angular", "VueJs", "jQuery", "TypeScript", "ES6", "yarn", "npm", "CSSResponsive", "json", "ajax", "materialDesign", "bootStrap", "W3Css"};
             for (int i = 0; i < 19; i++) {
                 if (values[i] != null)
-                    Score += DB_Expert.valueOf(skills[i]).value;
+                    Score += Front_End.valueOf(skills[i]).getValue();
             }
         } else if (EmployeeType == Extra.employeeTypes.EmployeeType.FullStack.getValue()) {
             String values[] = new String[16];
@@ -137,7 +147,7 @@ public class EmploymentPage extends HttpServlet {
             String[] skills = {"CSS", "JS", "reactJs", "jQuery", "mobilePrograming", "python", "ruby", "nodeJs", "PHP7", "ASP_NET", "webServer", "SQLServer", "oracleDatabase", "xamarin", "security", "docker"};
             for (int i = 0; i < 16; i++) {
                 if (values[i] != null)
-                    Score += DB_Expert.valueOf(skills[i]).value;
+                    Score += Full_Stack.valueOf(skills[i]).getValue();
             }
         } else if (EmployeeType == Extra.employeeTypes.EmployeeType.NetworkSecurityExpert.getValue()) {
             String values[] = new String[9];
@@ -147,7 +157,7 @@ public class EmploymentPage extends HttpServlet {
             String[] skills = {"UTM", "ISMS", "PLC", "CEH", "CISSP", "CCNA", "QOD", "HAIPE_IP", "MPLS"};
             for (int i = 0; i < 9; i++) {
                 if (values[i] != null)
-                    Score += DB_Expert.valueOf(skills[i]).value;
+                    Score += Network_Security.valueOf(skills[i]).value;
             }
         }
         return Score;

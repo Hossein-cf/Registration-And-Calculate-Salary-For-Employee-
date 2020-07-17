@@ -361,7 +361,6 @@
 
             alert("Employee Code : "+<%= GenerateEmployeeNumber.generateNumber()%>);
             document.getElementById("regForm").submit();
-
             return false;
 
         }
@@ -370,6 +369,8 @@
     }
 
 </script>
+
+
 
 </body>
 </html>

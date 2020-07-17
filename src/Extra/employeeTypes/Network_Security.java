@@ -10,6 +10,7 @@ public enum Network_Security {
     QOD((byte) 5),
     HAIPE_IP((byte) 5),
     MPLS((byte) 5);
+
     public final byte value;
 
     Network_Security(byte value) {
