@@ -53,7 +53,7 @@
 <section class="pane-1-e">
 
 
-    <form id="regForm" action="">
+    <form id="regForm" action="${pageContext.request.contextPath}/EmploymentPage" method="post">
 
         <h1>Complete information about the Employee</h1>
 
@@ -63,7 +63,7 @@
             <%--            <p><input placeholder="Last name..." oninput="this.className = ''"></p>--%>
             <div class="tab-1">
                 <div class="custom-select" style="width:200px;">
-                    <select id="EType">
+                    <select id="EType" name="EType">
                         <option value="0">Employee Type :</option>
                         <option value="1">Data Base Expert</option>
                         <option value="2">Net Work Security Expert</option>
@@ -73,20 +73,20 @@
                     </select>
                 </div>
                 <div class="custom-select" style="width:200px;">
-                    <select>
+                    <select name="ELevel">
                         <option value="0">Employee Level :</option>
                         <option value="1">Junior</option>
-                        <option value="2">Mid-level</option>
+                        <option value="2">Mid_level</option>
                         <option value="3">Senior</option>
 
                     </select>
                 </div>
                 <div class="custom-select" style="width:200px;">
-                    <select>
+                    <select name="WorkTime">
                         <option value="0">Work Time :</option>
                         <option value="1">Full time(8-20)</option>
                         <option value="2">Morning work(8-14)</option>
-                        <option value="3">afternoon work(14-22)</option>
+                        <option value="3">Afternoon work(14-22)</option>
                         <option value="4">Night work(22-16)</option>
 
                     </select>
@@ -121,8 +121,8 @@
                 </div>
 
                 <div class="t">
-                    <div class="custom-select Gender" id="Gender" style="width:200px;margin-right: 10px;">
-                        <select>
+                    <div class="custom-select Gender" id="Gender"   style="width:200px;margin-right: 10px;">
+                        <select name="Gender">
                             <option value="0">Gender :</option>
                             <option value="1">Male</option>
                             <option value="2">FeMale</option>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="t">
                     <div class="custom-select" style="width:200px;">
-                        <select>
+                        <select name="ELevelOfEducation" >
                             <option value="0">Level of Eduction :</option>
                             <option value="1">Diploma</option>
                             <option value="2">Bachelor</option>
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="test-address">
-                <p><input placeholder="Address" oninput="this.className = ''"></p>
+                <p><input name="Address" placeholder="Address" oninput="this.className = ''"></p>
             </div>
             <div class="test">
                 <div class="t">
@@ -233,6 +233,7 @@
 </section>
 
 <script src="../ManagerDashbordStyle/js/EmploymentScript.js"></script>
+
 <script>
 
 

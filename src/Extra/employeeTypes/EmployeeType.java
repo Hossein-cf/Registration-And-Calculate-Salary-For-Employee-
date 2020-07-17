@@ -1,7 +1,7 @@
 package Extra.employeeTypes;
 
 public enum EmployeeType {
-    FullStack((byte) 0), FrontEnd((byte) 1), BackEnd((byte) 2), NetworkSecurityExpert((byte) 3), DBExpert((byte) 4);
+    FullStack((byte) 3), FrontEnd((byte) 4), BackEnd((byte) 5), NetworkSecurityExpert((byte) 2), DBExpert((byte) 1);
      private final byte value;
 
     EmployeeType(byte value) {

@@ -1,6 +1,5 @@
-package LoginServlets;
+package ServletsClasses;
 
-import javax.jws.WebService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 @WebServlet("/ManagerLoginServlet")
 public class ManagerLoginServlet extends HttpServlet {
 
@@ -28,6 +26,7 @@ public class ManagerLoginServlet extends HttpServlet {
 
         String user = req.getParameter("userName");
         String pass = req.getParameter("pass");
+        System.out.println(user+pass);
         if(user.equals("123456") && pass.equals("123456")) {
             RequestDispatcher view = req.getRequestDispatcher("ManagerDashbord.jsp");
             view.forward(req,resp);
