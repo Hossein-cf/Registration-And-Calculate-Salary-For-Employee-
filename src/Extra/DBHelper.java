@@ -51,7 +51,7 @@ public class DBHelper {
         int IDSalaryInformation = insertSalaryInformation(employee.getSalaryInformation());
 
         isConnectionToTheDB();
-        String query = "INSERT INTO [dbo].[tblEmployee]( [IDPrerson], [IDJobInformation], [IDSalaryInformation], [EmployeeNumber]) VALUES ('" + IDPerson + "','" + IDJobInformation + "','" + IDSalaryInformation + "','" + employee.getEmployeeNumber() + "');";
+        String query = "INSERT INTO [dbo].[tblEmployee]( [IDPrerson], [IDJobInformation], [IDSalaryInformation], [EmployeeNumber],EmployeeLevel) VALUES ('" + IDPerson + "','" + IDJobInformation + "','" + IDSalaryInformation + "','" + employee.getEmployeeNumber() + "','"+employee.getEmployeeLevel()+"');";
         isConnectionToTheDB();
         try {
             statement.executeUpdate(query);
@@ -66,7 +66,7 @@ public class DBHelper {
     }
 
     private int insertPerson(Person person) {
-        String query = "INSERT INTO tblPersonalInformation ( [Name], [LastName], [FatherName], [NamtionalNumber], [BornPlace], [BornTime], [Address], [PostalCode], [PhoneNumber], [HomePhoneNumber], [Marriage], [Gender], [NumberOfChidren], [Image])VALUES ('" + person.getName() + "','" + person.getLastName() + "','" + person.getFatherName() + "','" + person.getNationalNumber() + "','" + person.getBirthPlace() + "','" + person.getBirthTime() + "','" + person.getAddress() + "','" + person.getPostalCode() + "','" + person.getPhoneNumber() + "','" + person.getHomePhoneNumber() + "','" + person.isMarriage() + "','" + person.getGender() + "','" + person.getNumberOfChild() + "','" + person.getProfileImage() + "'); ";
+        String query = "INSERT INTO tblPersonalInformation ( [Name], [LastName], [FatherName], [NamtionalNumber], [BornPlace], [BornTime], [Address], [PostalCode], [PhoneNumber], [HomePhoneNumber], [Marriage], [Gender], [NumberOfChidren])VALUES ('" + person.getName() + "','" + person.getLastName() + "','" + person.getFatherName() + "','" + person.getNationalNumber() + "','" + person.getBirthPlace() + "','" + person.getBirthTime() + "','" + person.getAddress() + "','" + person.getPostalCode() + "','" + person.getPhoneNumber() + "','" + person.getHomePhoneNumber() + "','" + person.isMarriage() + "','" + person.getGender() + "','" + person.getNumberOfChild() + "'); ";
         isConnectionToTheDB();
         int IDPerson = 0;
         try {
@@ -106,7 +106,7 @@ public class DBHelper {
     }
 
     private int insertSalaryInformation(SalaryInformation salaryInformation) {
-        String query = "INSERT INTO [dbo].[tblSalaryInformation] ( [Morningwork], [AfternoonWork], [NightWork], [BaseSalary])VALUES ('" + salaryInformation.isMorningWorking() + "','" + salaryInformation.isAfternoonWorking() + "','" + salaryInformation.isNightWorking() + "','" + salaryInformation.getBaseSalary() + "');";
+        String query = "INSERT INTO [dbo].[tblSalaryInformation] ( [Morningwork], [AfternoonWork], [NightWork], [BaseSalary],FullTime)VALUES ('" + salaryInformation.isMorningWorking() + "','" + salaryInformation.isAfternoonWorking() + "','" + salaryInformation.isNightWorking() + "','" + salaryInformation.getBaseSalary() + "','"+salaryInformation.isFullTimeWorking()+"');";
         int count = 0;
         isConnectionToTheDB();
         try {
@@ -126,7 +126,7 @@ public class DBHelper {
 
     public boolean insertReceipt(Receipt receipt, String EmployeeNumber) {
         isConnectionToTheDB();
-        String query = "INSERT INTO [dbo].[tblReceipt]([IDEmployee], [FinalSalary], [RightToHousing], [Insurance], [Tax], [WorkTime], [OverTimeWork], [Premium], [Date], [Condition],[Serial]) VALUES ('" + getIDEmployee(EmployeeNumber) + "','" + receipt.getFinalSalary() + "','" + receipt.getRightToHousing() + "','" + receipt.getInsurance() + "','" + receipt.getTax() + "','" + receipt.getWorkTime() + "','" + receipt.getOverWorkTime() + "','" + receipt.getPremium() + "','" + receipt.getDate() + "','" + receipt.isCondition() + "','"+receipt.getSerial()+"');";
+        String query = "INSERT INTO [dbo].[tblReceipt]([IDEmployee], [FinalSalary], [RightToHousing], [Insurance], [Tax], [WorkTime], [OverTimeWork], [Premium], [Date], [Condition],[Serial], [yearSalary], [deductedAmount]) VALUES ('" + getIDEmployee(EmployeeNumber) + "','" + receipt.getFinalSalary() + "','" + receipt.getRightToHousing() + "','" + receipt.getInsurance() + "','" + receipt.getTax() + "','" + receipt.getWorkTime() + "','" + receipt.getOverWorkTime() + "','" + receipt.getPremium() + "','" + receipt.getDate() + "','" + receipt.isCondition() + "','"+receipt.getSerial()+"','"+receipt.getYearSalary()+"','"+receipt.getDeductedAmount()+"');";
         try {
             statement.executeUpdate(query);
             isClosedTheDB();
@@ -180,6 +180,7 @@ public class DBHelper {
                 employee = (Employee) person;
                 employee.setJobInformation(readJobInformation(resultSet.getInt("IDJobInformation")));
                 employee.setSalaryInformation(readSalaryInformation(resultSet.getInt("IDSalaryInformation")));
+                employee.setEmployeeLevel(resultSet.getString("EmployeeLevel"));
                 employee.setEmployeeNumber(EmployeeNumber);
             }
             isClosedTheDB();
@@ -212,12 +213,12 @@ public class DBHelper {
                 person.setPostalCode(resultSet.getString("PostalCode"));
                 person.setNationalNumber(resultSet.getLong("NationalNumber"));
                 person.setBirthPlace(resultSet.getString("BornPlace"));
-                person.setBirthTime(LocalDate.parse(resultSet.getString("BornTime")));
+                person.setBirthTime(resultSet.getString("BornTime"));
                 person.setHomePhoneNumber(resultSet.getString("HomePhoneNumber"));
                 person.setMarriage(resultSet.getBoolean("Marriage"));
                 person.setGender(resultSet.getString("Gender"));
                 person.setNumberOfChild(resultSet.getInt("NumberOfChildren"));
-                person.setProfileImage(new Image("./Files/profileImage.jpg"));
+//                person.setProfileImage(new Image("./Files/profileImage.jpg"));
             }
             isClosedTheDB();
             return person;
@@ -239,6 +240,7 @@ public class DBHelper {
                 jobInformation.setEmployeeType(resultSet.getString("EmployeeType"));
                 jobInformation.setExperience(resultSet.getInt("WorkExperience"));
                 jobInformation.setSkills(resultSet.getString("Skills"));
+
             }
             isClosedTheDB();
 
@@ -263,6 +265,7 @@ public class DBHelper {
                 salaryInformation.setBaseSalary(resultSet.getString("BaseSalary"));
                 salaryInformation.setMorningWorking(resultSet.getBoolean("MorningWork"));
                 salaryInformation.setNightWorking(resultSet.getBoolean("NightWork"));
+                salaryInformation.setFullTimeWorking(resultSet.getBoolean("FullTime"));
             }
             isClosedTheDB();
             return salaryInformation;
@@ -293,6 +296,9 @@ public class DBHelper {
                 receipt.setPremium(resultSet.getString("Premium"));
                 receipt.setDate(LocalDate.parse(resultSet.getString("Date")));
                 receipt.setSerial(resultSet.getLong("Serial"));
+//                [Serial], [yearSalary], [deductedAmount]
+                receipt.setYearSalary(resultSet.getString("yearSalary"));
+                receipt.setDeductedAmount(resultSet.getString("deductedAmount"));
                 receipts.add(receipt);
 
 
@@ -369,7 +375,7 @@ public class DBHelper {
     }
 
     private boolean updatePerson(Person person, int ID) {
-        String query = "UPDATE tblEmployee set [Name] = '"+person.getName()+"', [LastName]='"+person.getLastName()+"', [FatherName]='"+person.getFatherName()+"', [NamtionalNumber]='"+person.getNationalNumber()+"', [BornPlace]='"+person.getBirthPlace()+"', [BornTime]='"+person.getBirthTime()+"', [Address]='"+person.getAddress()+"', [PostalCode]='"+person.getPostalCode()+"', [PhoneNumber]='"+person.getPhoneNumber()+"', [HomePhoneNumber]='"+person.getHomePhoneNumber()+"', [Marriage]='"+person.isMarriage()+"', [Gender]='"+person.getGender()+"', [NumberOfChidren]='"+person.getNumberOfChild()+"', [Image]='"+person.getProfileImage()+"' WHERE ID = '"+ID+"';";
+        String query = "UPDATE tblEmployee set [Name] = '"+person.getName()+"', [LastName]='"+person.getLastName()+"', [FatherName]='"+person.getFatherName()+"', [NamtionalNumber]='"+person.getNationalNumber()+"', [BornPlace]='"+person.getBirthPlace()+"', [BornTime]='"+person.getBirthTime()+"', [Address]='"+person.getAddress()+"', [PostalCode]='"+person.getPostalCode()+"', [PhoneNumber]='"+person.getPhoneNumber()+"', [HomePhoneNumber]='"+person.getHomePhoneNumber()+"', [Marriage]='"+person.isMarriage()+"', [Gender]='"+person.getGender()+"', [NumberOfChidren]='"+person.getNumberOfChild()+"';";
         isConnectionToTheDB();
         try {
             statement.executeUpdate(query);

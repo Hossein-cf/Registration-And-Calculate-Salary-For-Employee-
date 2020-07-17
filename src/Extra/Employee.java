@@ -8,9 +8,17 @@ public class Employee extends Person{
     private ArrayList<DailyRecords> records;
     private ArrayList<Receipt>  receipts;
     private SalaryInformation salaryInformation;
-
+    private String employeeLevel;
     public JobInformation getJobInformation() {
         return jobInformation;
+    }
+
+    public String getEmployeeLevel() {
+        return employeeLevel;
+    }
+
+    public void setEmployeeLevel(String employeeLevel) {
+        this.employeeLevel = employeeLevel;
     }
 
     public void setJobInformation(JobInformation jobInformation) {

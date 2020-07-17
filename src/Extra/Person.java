@@ -14,12 +14,19 @@ public class Person {
     private long nationalNumber;
     private String phoneNumber;
     private String homePhoneNumber;
-    private LocalDate birthTime;
+    private String birthTime;
     private String postalCode;
-    private Image ProfileImage;
+//    private Image ProfileImage;
     private boolean marriage;
     private int numberOfChild;
 
+    public String getBirthTime() {
+        return birthTime;
+    }
+
+    public void setBirthTime(String birthTime) {
+        this.birthTime = birthTime;
+    }
 
     public String getName() {
         return name;
@@ -93,13 +100,7 @@ public class Person {
         this.homePhoneNumber = homePhoneNumber;
     }
 
-    public LocalDate getBirthTime() {
-        return birthTime;
-    }
 
-    public void setBirthTime(LocalDate birthTime) {
-        this.birthTime = birthTime;
-    }
 
     public String getPostalCode() {
         return postalCode;
@@ -109,13 +110,13 @@ public class Person {
         this.postalCode = postalCode;
     }
 
-    public Image getProfileImage() {
-        return ProfileImage;
-    }
-
-    public void setProfileImage(Image profileImage) {
-        ProfileImage = profileImage;
-    }
+//    public Image getProfileImage() {
+//        return ProfileImage;
+//    }
+//
+//    public void setProfileImage(Image profileImage) {
+//        ProfileImage = profileImage;
+//    }
 
     public boolean isMarriage() {
         return marriage;
@@ -149,7 +150,7 @@ public class Person {
                 ", homePhoneNumber='" + homePhoneNumber + '\'' +
                 ", birthTime=" + birthTime +
                 ", postalCode='" + postalCode + '\'' +
-                ", ProfileImage=" + ProfileImage +
+
                 ", marriage=" + marriage +
                 ", numberOfChild=" + numberOfChild +
                 '}';
