@@ -14,6 +14,27 @@ public class Receipt {
     private LocalDate date;
     private boolean condition;
     private long serial;
+    private  String yearSalary;
+    private String deductedAmount ;
+
+    public String getDeductedAmount() {
+        return deductedAmount;
+    }
+
+    public void setDeductedAmount(String deductedAmount) {
+        this.deductedAmount = deductedAmount;
+    }
+
+
+    public String getYearSalary() {
+        return yearSalary;
+    }
+
+    public void setYearSalary(String yearSalary) {
+        this.yearSalary = yearSalary;
+    }
+
+
 
     public long getSerial() {
         return serial;
@@ -106,7 +127,9 @@ public class Receipt {
                 ", overWorkTime='" + overWorkTime + '\'' +
                 ", Premium='" + Premium + '\'' +
                 ", date=" + date +
-                ", condition=" + condition +
+                ", condition=" + condition +'\'' +
+                ", deductedAmount=" + deductedAmount +'\'' +
+                ", yearSalary=" + yearSalary +
                 '}';
     }
 
