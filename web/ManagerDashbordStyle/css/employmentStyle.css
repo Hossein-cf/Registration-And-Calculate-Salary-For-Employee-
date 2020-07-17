@@ -102,6 +102,10 @@ input.invalid {
 .tab {
     display: none;
 }
+.row-c{
+    display: table;
+    margin-top: 30px;
+}
 .tab-1{
     display: flex;
     flex-flow: row wrap;
@@ -109,6 +113,37 @@ input.invalid {
     margin-bottom: 50px;
 
 }
+.custom-pane{
+    margin-right: 100px;
+    margin-top: 50px;
+
+    width: 10%;
+    height: 50px;
+    border-radius: 5px;
+    display: table-cell;
+}
+
+.c1{
+    display: table-cell;
+
+}
+.c2{
+    display: table-cell;
+    margin-left: 300px;
+
+
+}
+.ch-st{
+    margin-top: 20px;
+    margin-left: 200px;
+
+}
+.ch-st-1{
+    margin-left: 20px;
+    margin-top: 0;
+
+}
+
 .tab-2-fieldset{
     height: 100px;
 }

@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../ManagerDashbordStyle/css/employmentStyle.css">
+
+
 </head>
+
+
 <body>
 
 <section id="sideMenu">
@@ -21,13 +25,14 @@
         <a class="a-side" href="../ManagerDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
             DashBord</a>
         <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
-                                                                      aria-hidden="true"></i>
+                                                                         aria-hidden="true"></i>
             Employment</a>
         <a class="a-side" href="#"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Issuance Receipt</a>
         <a class="a-side" href="#"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Daily Records</a>
-        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x"
+                                                                              aria-hidden="true"></i>
             Company Members</a>
     </nav>
 </section>
@@ -58,7 +63,7 @@
             <%--            <p><input placeholder="Last name..." oninput="this.className = ''"></p>--%>
             <div class="tab-1">
                 <div class="custom-select" style="width:200px;">
-                    <select>
+                    <select id="EType">
                         <option value="0">Employee Type :</option>
                         <option value="1">Data Base Expert</option>
                         <option value="2">Net Work Security Expert</option>
@@ -111,8 +116,8 @@
             </div>
 
             <div class="test">
-                <div  class="t">
-                    <input style="width: 200px" name="firstName" placeholder="Born palce" type="text" />
+                <div class="t">
+                    <input style="width: 200px" name="firstName" placeholder="Born palce" type="text"/>
                 </div>
 
                 <div class="t">
@@ -120,7 +125,7 @@
                         <select>
                             <option value="0">Gender :</option>
                             <option value="1">Male</option>
-                            <option value="2">Gender</option>
+                            <option value="2">FeMale</option>
                         </select>
                     </div>
                 </div>
@@ -139,61 +144,78 @@
             </div>
             <div class="test">
                 <div class="t">
-                    <input style="width: 300px" name="PostalCode" placeholder="Postal Code" type="text" />
+                    <input style="width: 300px" name="PostalCode" placeholder="Postal Code" type="text"/>
 
                 </div>
                 <div class="t">
-                    <input style="width: 500px" name="PhoneNumber" placeholder="Phone Number" type="text" />
+                    <input style="width: 500px" name="PhoneNumber" placeholder="Phone Number" type="text"/>
                 </div>
 
             </div>
 
 
-
-
-
         </div>
 
         <div class="tab">
+            <div class="row-c">
 
 
-            <label class="container">One
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-            </label>
+                <div class="custom-pane">
 
-            <label class="container">Two
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
 
-            <label class="container">Three
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
+                    <div class="c1">
+                        <label>Git</label>
+                    </div>
+                    <div class="c2">
+                        <input type="checkbox">
+                    </div>
 
-            <label class="container">Four
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
+
+                </div>
+
+                <div class="custom-pane">
+
+
+                    <div class="c1">
+                        <label>Telle Working</label>
+                    </div>
+                    <div class="c2">
+                        <input type="checkbox">
+                    </div>
+
+
+                </div>
+                <div class="custom-pane">
+
+
+                    <div class="c1">
+                        <label>Mac/Linux</label>
+                    </div>
+                    <div class="c2">
+                        <input type="checkbox">
+                    </div>
+
+
+                </div>
+            </div>
 
         </div>
 
 
-        <table class="tab">
-            <tr class="tbl">
+        <table id="spcTable" class="tab">
+            <tr class="tbl" >
                 <th style="width: 500px; ">Specialty</th>
                 <th style="width: 500px; ">Choose</th>
             </tr>
-
+            <a  href="#" onclick="CreateRows();" > gfgfng</a>
         </table>
 
 
 
         <div style="margin-top: 30px">
             <div style="float:right;">
-                <a href="#" class="btn-solid-lg"  type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</a>
-                <a href="#" class="btn-solid-lg" type="button" id="nextBtn" onclick="nextPrev(1)">Next</a>
+                <a href="#" class="btn-solid-lg" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</a>
+                <a href="#" class="btn-solid-lg" type="button" id="nextBtn"  onclick="nextPrev(1),CreateRows();">Next</a>
             </div>
         </div>
 
@@ -210,13 +232,27 @@
 </section>
 
 <script src="../ManagerDashbordStyle/js/EmploymentScript.js"></script>
-
 <script>
-    var FullStack = ["Saab", "Volvo", "BMW"];
+    function CreateRows() {
+        var  tbl = document.getElementById("spcTable");
+
+        var ET = document.getElementById("EType");
+
+        if( ET.selectedIndex=== 1){
+            var row = tbl.insertRow();
+            var cell1 = row.insertCell();
+            var cell2 = row.insertCell();
+
+            cell1.innerHTML ="jbh,ck"
+            cell1.innerHTML ="jbh,ck"
+        }
 
 
+
+    }
 
 </script>
+
 
 </body>
 </html>

@@ -14,7 +14,7 @@ body{
     background: #2C213D ;
     max-width: 300px ;
     margin-left: -10px;
-    height: 1500px;
+    height: 2000px;
     margin-top: -10px;
     position: absolute;
     top: 0;
@@ -63,6 +63,10 @@ header{
 }
 .search-area{
     display: inline-block;
+    background-color: #cbd3da;
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -30px;
 
 }
 #search-input{
@@ -168,13 +172,33 @@ header{
 
     color: #00bfd8;
     margin-bottom: 50px;
+    font-size: 15px;
 }
+.second-pane-text{
+
+
+    color: #00bfd8;
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+.third-pane-text{
+
+
+    color: #00bfd8;
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+
+
 
 .second-pane{
 
     width: 600px;
     height: 300px;
-    text-align: left;
+    margin-bottom: 100px;
+    margin-top: -10px;
+
 
 }
 .third-pane{
@@ -292,7 +316,7 @@ header{
     transform: rotateY(180deg);
 }
 .topnav {
-    background-color: white;
+
     overflow: hidden;
 
     margin-left: -5px;
@@ -305,9 +329,9 @@ header{
     height:60px ;
     align-content: center;
     font-weight: bold;
-    margin-top: 20px;
+
     float: left;
-    color: #00bfd8;
+    color: #0b0b0b;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

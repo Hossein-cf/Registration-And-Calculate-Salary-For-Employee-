@@ -91,7 +91,7 @@
 
         <div class="inline-row-1">
             <div class="first-pane">
-                <h1 class="first-pane-text">Welcome to Your Management1  System <br> Manage For Free</h1>
+                <h1 class="first-pane-text" style="font-size: 25px;">Welcome to Your Management  System <br> Manage For Free</h1>
                 <p class="p-large">"You can use this web application for free to manage your company accounting easily, that our team develop it by java language" </p>
             </div>
 
@@ -105,6 +105,7 @@
 
 
 </section>
+
 <section class="pane-1">
 <%--    2--%>
     <div class="row-in-pane">
@@ -113,7 +114,8 @@
 
         <div class="inline-row-1">
             <section class="second-pane">
-                <h1 class="first-pane-text">Welcome to Your Management1  System <br> Manage For Free</h1>
+
+                <h1 class="second-pane-text" style="font-size: 25px;">You can improve Process of Salary Payment   <br> With this Application</h1>
                 <p class="p-large">"You can use this web application for free to manage your company accounting easily, that our team develop it by java language" </p>
 
             </section>
@@ -128,10 +130,10 @@
                              style="width:300px;height:300px;">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Company Name:</h1>
-                        <p>Unknown</p>
-                        <h1>Company type:</h1>
-                        <p>Private</p>
+                        <h1>Hired Employee Numbers:</h1>
+                        <p>0</p>
+                        <h1>Payed Salaries</h1>
+                        <p>$0</p>
                     </div>
                 </div>
             </div>
@@ -156,10 +158,10 @@
                              style="width:300px;height:300px;">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Company Name:</h1>
-                        <p>Unknown</p>
-                        <h1>Company type:</h1>
-                        <p>Private</p>
+                        <h1>Back End Team:</h1>
+                        <p>Hossein Shakeri& Ali isaZadeh</p>
+                        <h1>Front End:</h1>
+                        <p>Ghader Salehi</p>
                     </div>
                 </div>
             </div>
@@ -167,8 +169,8 @@
 
         <div class="inline-row-1">
             <section class="third-pane">
-                <h1 class="first-pane-text">Welcome to Your Management1  System <br> Manage For Free</h1>
-                <p class="p-large">"You can use this web application for free to manage your company accounting easily, that our team develop it by java language" </p>
+                <h1 class="third-pane-text" style="font-size: 25px;">About Our Team:  </h1>
+                <p class="p-large">" Our Team with two Back End Developer And a Front End Developer , Develope this Web Application by java Language   " </p>
             </section>
         </div>
 
@@ -180,16 +182,7 @@
 
 
 <section>
-    <div class="cards">
 
-        <div class="card-1">
-
-            <div class="See-charts">
-                <span class="Developing">  </span>
-            </div>
-        </div>
-
-    </div>
 </section>
 
 

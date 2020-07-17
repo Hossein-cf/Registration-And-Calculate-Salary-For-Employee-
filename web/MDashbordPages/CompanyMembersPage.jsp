@@ -67,10 +67,9 @@
                             <img src="../ManagerDashbordStyle/pics/front-end.png" alt="Avatar" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h1>Company Name:</h1>
-                            <p>Unknown</p>
-                            <h1>Company type:</h1>
-                            <p>Private</p>
+                            <h1>Numbers of Front End Employee</h1>
+                            <p>0</p>
+
                         </div>
                     </div>
                 </div>
@@ -83,9 +82,8 @@
                             <img src="../ManagerDashbordStyle/pics/back-end.png" alt="Avatar" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h1></h1>
-                            <p></p>
-                            <p></p>
+                            <h1>Numbers of Back End Employee</h1>
+                            <p>0</p>
                         </div>
                     </div>
                 </div>
@@ -97,10 +95,8 @@
                             <img src="../ManagerDashbordStyle/pics/fullstack-logo-light.jpg" alt="Avatar" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h1>Developer Team:</h1>
-                            <p>Back end: Hossein Shakeri & Ali EsaZadeh</p>
-                            <p>Front End:Ghader Salehi</p>
-                            <p></p>
+                            <h1>Numbers of full stack Employee</h1>
+                            <p>0</p>
                         </div>
                     </div>
                 </div>
@@ -116,13 +112,11 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../ManagerDashbordStyle/pics/DB.jpg" alt="Avatar" style="width:300px;height:300px;">
+                        <img src="../ManagerDashbordStyle/pics/DBS.png" alt="Avatar" style="width:300px;height:300px;">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Company Name:</h1>
-                        <p>Unknown</p>
-                        <h1>Company type:</h1>
-                        <p>Private</p>
+                        <h1>Numbers of Data Base Expert</h1>
+                        <p>0</p>
                     </div>
                 </div>
             </div>
@@ -135,9 +129,8 @@
                         <img src="../ManagerDashbordStyle/pics/Security.jpg" alt="Avatar" style="width:300px;height:300px;">
                     </div>
                     <div class="flip-card-back">
-                        <h1></h1>
-                        <p></p>
-                        <p></p>
+                        <h1>Numbers of NetWork Security Expert</h1>
+                        <p>0</p>
                     </div>
                 </div>
             </div>
@@ -146,13 +139,11 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../ManagerDashbordStyle/pics/AppDeveloping.png" alt="Avatar" style="width:300px;height:300px;">
+                        <img src="../ManagerDashbordStyle/pics/Ap.png" alt="Avatar" style="width:300px;height:300px;">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Developer Team:</h1>
-                        <p>Back end: Hossein Shakeri & Ali EsaZadeh</p>
-                        <p>Front End:Ghader Salehi</p>
-                        <p></p>
+                        <h1>Numbers of App Developer</h1>
+                        <p>0</p>
                     </div>
                 </div>
             </div>
