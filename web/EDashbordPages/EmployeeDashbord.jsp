@@ -1,4 +1,5 @@
-<%@ page import="Extra.GenerateEmployeeNumber" %><%--
+<%@ page import="Extra.GenerateEmployeeNumber" %>
+<%@ page import="ServletsClasses.EmployeeDashboardGetData" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/16/2020
@@ -36,8 +37,6 @@
 
 <header>
     <div class="search-area">
-
-
         <div class="topnav">
             <a class="active" href="../index.html">Home</a>
             <a href="#news">Help</a>
@@ -62,32 +61,33 @@
 <section class="pane-1">
     <%--    1--%>
         <div class="row-in-pane">
-
-
-
             <div class="inline-row-1" style="width: 600px;">
                 <div class="ED-pane">
                     <h1>
+                        <%
+                        String employeeNumber = (String) request.getAttribute("employeeNumber");//todo
+                            EmployeeDashboardGetData data =null;
+                            if (employeeNumber != null) {
+                                data = new EmployeeDashboardGetData(employeeNumber);
+                            }
+                        %>
                         Employee Info:
                         <br>
                         <br>
                         <br>
                             Full Name:
-                        <input id="FullName" type="text">
+                        <input id="FullName" type="text" value="<%if (data!=null)out.print(data.getFullName());%>">
                         <br>
                             Employee Code:
-                        <input id="EmployeeCode" type="text">
+                        <input id="EmployeeCode" type="text" value="<%if (data!=null)out.print(data.getEmployeeCode());%>">
                         <br>
                             National Code:
-                        <input id="NationalCode" type="text">
+                        <input id="NationalCode" type="text" value="<%if (data!=null)out.print(data.getNationalCode());%>">
                             <br>
                             Base Salary:
-                        <input id="" type="text">
+                        <input id="" type="text"value="<%if (data!=null)out.print(data.getBaseSalary());%>">
                     </h1>
-
-
                 </div>
-
             </div>
 <%--                        <div class="inline-row-1" style="display: inline-block">--%>
 <%--                            <div class="flip-card" style="width: 400px;height: 300px;">--%>
