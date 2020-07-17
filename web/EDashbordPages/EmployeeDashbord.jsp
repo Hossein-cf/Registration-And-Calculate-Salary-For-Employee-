@@ -39,10 +39,10 @@
 
 
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
+            <a class="active" href="../index.html">Home</a>
             <a href="#news">Help</a>
             <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a href="../EmployeeloginJSP.jsp">Log out</a>
         </div>
     </div>
 </header>
@@ -63,32 +63,48 @@
     <%--    1--%>
         <div class="row-in-pane">
 
-            <div class="inline-row-1">
-                <div class="flip-card" style="width: 400px;height: 300px;">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../ManagerDashbordStyle/pics/Work.png" alt="Avatar"
-                                 style="width:400px;height:300px;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Your Job in Company</h1>
-                            <p>---</p>
-                            <h1>Your Work Time</h1>
-                            <p>---</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <div class="inline-row-1" style="width: 600px;">
                 <div class="ED-pane">
-
+                    <h1>
+                        Employee Info:
+                        <br>
+                        <br>
+                        <br>
+                            Full Name:
+                        <input id="FullName" type="text">
+                        <br>
+                            Employee Code:
+                        <input id="EmployeeCode" type="text">
+                        <br>
+                            National Code:
+                        <input id="NationalCode" type="text">
+                            <br>
+                            Base Salary:
+                        <input id="" type="text">
+                    </h1>
 
 
                 </div>
 
             </div>
-
+<%--                        <div class="inline-row-1" style="display: inline-block">--%>
+<%--                            <div class="flip-card" style="width: 400px;height: 300px;">--%>
+<%--                                <div class="flip-card-inner">--%>
+<%--                                    <div class="flip-card-front">--%>
+<%--                                        <img src="../ManagerDashbordStyle/pics/Work.png" alt="Avatar"--%>
+<%--                                             style="width:400px;height:300px;">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="flip-card-back">--%>
+<%--                                        <h1>Your Job in Company</h1>--%>
+<%--                                        <p>---</p>--%>
+<%--                                        <h1>Your Work Time</h1>--%>
+<%--                                        <p>---</p>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
 
         </div>
@@ -96,20 +112,7 @@
 
 </section>
 
-<section class="pane-1">
-    <%--    2--%>
 
-
-
-</section>
-
-
-<section class="pane-1">
-    <%--    3--%>
-
-
-
-</section>
 
 
 <section>

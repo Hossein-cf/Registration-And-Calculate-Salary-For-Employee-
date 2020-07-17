@@ -45,10 +45,10 @@
 
 
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
+            <a class="active" href="../index.html">Home</a>
             <a href="#news">Help</a>
             <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a href="../EmployeeloginJSP.jsp">Log out</a>
         </div>
     </div>
 </header>

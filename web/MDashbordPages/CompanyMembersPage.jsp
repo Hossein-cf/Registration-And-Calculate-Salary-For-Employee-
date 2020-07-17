@@ -56,54 +56,103 @@
 
 
 
-<section class="pane-1">
+<%--<section class="pane-1" >--%>
 
-        <div class="row-in-pane">
+<%--        <div class="row-in-pane">--%>
 
-            <div class="inline-row-1">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../ManagerDashbordStyle/pics/front-end.png" alt="Avatar" style="width:300px;height:300px;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Numbers of Front End Employee</h1>
-                            <p>0</p>
+<%--            <div class="inline-row-1" style="margin-right: 70px;margin-left: 70px;margin-top: 5px;" >--%>
+<%--                <div class="flip-card">--%>
+<%--                    <div class="flip-card-inner">--%>
+<%--                        <div class="flip-card-front">--%>
+<%--                            <img src="../ManagerDashbordStyle/pics/front-end.png" alt="Avatar" style="width:300px;height:300px;">--%>
+<%--                        </div>--%>
+<%--                        <div class="flip-card-back">--%>
+<%--                            <h1>Numbers of Front End Employee</h1>--%>
+<%--                            <p>0</p>--%>
 
-                        </div>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+
+<%--            <div class="inline-row-1">--%>
+<%--                <div class="flip-card">--%>
+<%--                    <div class="flip-card-inner">--%>
+<%--                        <div class="flip-card-front">--%>
+<%--                            <img src="../ManagerDashbordStyle/pics/back-end.png" alt="Avatar" style="width:300px;height:300px;">--%>
+<%--                        </div>--%>
+<%--                        <div class="flip-card-back">--%>
+<%--                            <h1>Numbers of Back End Employee</h1>--%>
+<%--                            <p>0</p>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="inline-row-1">--%>
+<%--                <div class="flip-card">--%>
+<%--                    <div class="flip-card-inner">--%>
+<%--                        <div class="flip-card-front">--%>
+<%--                            <img src="../ManagerDashbordStyle/pics/fullstack-logo-light.jpg" alt="Avatar" style="width:300px;height:300px;">--%>
+<%--                        </div>--%>
+<%--                        <div class="flip-card-back">--%>
+<%--                            <h1>Numbers of full stack Employee</h1>--%>
+<%--                            <p>0</p>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--</section>--%>
+<%--1--%>
+<section class="pane-1-members">
+
+    <div class="row-in-pane">
+
+        <div class="inline-row-1-members">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+
+                        <img src="../ManagerDashbordStyle/pics/front-end.png" alt="Avatar" style="width:300px;height:300px;">
+
                     </div>
-                </div>
-            </div>
-
-            <div class="inline-row-1">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../ManagerDashbordStyle/pics/back-end.png" alt="Avatar" style="width:300px;height:300px;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Numbers of Back End Employee</h1>
-                            <p>0</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="inline-row-1">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../ManagerDashbordStyle/pics/fullstack-logo-light.jpg" alt="Avatar" style="width:300px;height:300px;">
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Numbers of full stack Employee</h1>
-                            <p>0</p>
-                        </div>
+                    <div class="flip-card-back">
+                        <h1>Numbers of Front End Employee</h1>
+                        <p>0</p>
                     </div>
                 </div>
             </div>
         </div>
-</section>
 
+        <div class="inline-row-1-members">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../ManagerDashbordStyle/pics/back-end.png" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Numbers of Back End Employee</h1>
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inline-row-1-members">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../ManagerDashbordStyle/pics/fullstack-logo-light.jpg" alt="Avatar" style="width:300px;height:300px;">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Numbers of full stack Employee</h1>
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%--2--%>
 <section class="pane-1-members">
 
     <div class="row-in-pane">
@@ -152,7 +201,6 @@
         </div>
     </div>
 </section>
-
 
 
 <section>
