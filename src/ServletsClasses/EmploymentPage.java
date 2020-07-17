@@ -1,10 +1,7 @@
 package ServletsClasses;
 
-import Extra.DBHelper;
-import Extra.Employee;
-import Extra.employeeTypes.DBExpert;
-import Extra.employeeTypes.DB_Expert;
-import Extra.employeeTypes.EmployeeType;
+import Extra.*;
+import Extra.employeeTypes.*;
 import com.sun.deploy.net.HttpRequest;
 
 import javax.servlet.ServletException;
@@ -29,29 +26,73 @@ public class EmploymentPage extends HttpServlet {
         employee.setLastName(req.getParameter("lastName"));
         employee.setFatherName(req.getParameter("FatherName"));
         employee.setNationalNumber(Long.parseLong(req.getParameter("NationalCode")));
-        req.getParameterValues("Gender");
-        req.getParameter("PostalCode");
-        req.getParameter("PhoneNumber");
-        req.getParameter("Address");
-        req.getParameter("HomePhoneNumber");
-        req.getParameter("marital status");
-        req.getParameter("Age");
-        req.getParameter("Born");
-        req.getParameter("Address");
-        req.getParameter("number of children");
+        employee.setGender(Gender.valueOf(req.getParameter("Gender")).name());
+        employee.setPostalCode(req.getParameter("PostalCode"));
+        employee.setPhoneNumber(req.getParameter("PhoneNumber"));
+        employee.setAddress(req.getParameter("Address"));
+        employee.setHomePhoneNumber(req.getParameter("HomePhoneNumber"));
+        if (req.getParameter("marital status").equals("1"))
+            employee.setMarriage(true);
+        else
+            employee.setMarriage(false);
+        employee.setBirthTime(req.getParameter("Age"));
+
+        employee.setBirthPlace(req.getParameter("Born"));
+        employee.setNumberOfChild(Integer.parseInt(req.getParameter("number of children")));
 
 
-        req.getParameter("ELevelOfEducation");
-        req.getParameter("WorkTime");
+        employee.setEmployeeLevel(EmployeeLevel.valueOf(req.getParameter("ELevelOfEducation")).name());
+        JobInformation jobInformation = new JobInformation();
+        SalaryInformation salaryInformation = new SalaryInformation();
+        if (req.getParameter("WorkTime").equals("2"))
+            salaryInformation.setMorningWorking(true);
+        else if (req.getParameter("WorkTime").equals("3"))
+            salaryInformation.setAfternoonWorking(true);
+        else if (req.getParameter("WorkTime").equals("4"))
+            salaryInformation.setNightWorking(true);
+        else
+            salaryInformation.setFullTimeWorking(true);
         req.getParameter("ELevel");
-        String git =req.getParameter("Git");
+        String git = req.getParameter("Git");
 
-         String telle_working=req.getParameter("Telle Working");
-        String mac_Linux =req.getParameter("Mac/Linux");
+        String telle_working = req.getParameter("Telle Working");
+        String mac_Linux = req.getParameter("Mac/Linux");
+
+
         String EmployeeTypeIndex = req.getParameter("EType");
         int Score = getScore(req, Integer.parseInt(EmployeeTypeIndex));
-        System.out.println(Score+"llllllll");
-        resp.sendRedirect("../web/MDashbordPages/EmploymentPage.jsp");
+        System.out.println(Score + "llllllll");
+        if (git != null)
+            Score++;
+        if (telle_working != null)
+            Score++;
+        if (mac_Linux != null)
+            ++Score;
+        if (EmployeeTypeIndex.equals("1")) {
+            jobInformation.setEmployeeType(EmployeeType.DBExpert.name());
+            salaryInformation.setBaseSalary(String.valueOf(new DBExpert().calculateBaseSalary(Score, employee.getEmployeeLevel(), "")));
+        } else if (EmployeeTypeIndex.equals("2")) {
+            jobInformation.setEmployeeType(EmployeeType.NetworkSecurityExpert.name());
+            salaryInformation.setBaseSalary(String.valueOf(new NetworkSecurityExpert().calculateBaseSalary(Score, employee.getEmployeeLevel(), "")));
+
+        } else if (EmployeeTypeIndex.equals("3")) {
+            jobInformation.setEmployeeType(EmployeeType.FullStack.name());
+            salaryInformation.setBaseSalary(String.valueOf(new FullStack().calculateBaseSalary(Score, employee.getEmployeeLevel(), "")));
+
+        } else if (EmployeeTypeIndex.equals("4")) {
+            jobInformation.setEmployeeType(EmployeeType.FrontEnd.name());
+            salaryInformation.setBaseSalary(String.valueOf(new FrontEnd().calculateBaseSalary(Score, employee.getEmployeeLevel(), "")));
+
+        } else if (EmployeeTypeIndex.equals("5")) {
+            jobInformation.setEmployeeType(EmployeeType.BackEnd.name());
+            salaryInformation.setBaseSalary(String.valueOf(new BackEnd().calculateBaseSalary(Score, employee.getEmployeeLevel(), "")));
+
+        }
+        jobInformation.setSkills("full");
+        employee.setJobInformation(jobInformation);
+        employee.setSalaryInformation(salaryInformation);
+        new DBHelper().insertEmployee(employee);
+
     }
 
     private int getScore(HttpServletRequest req, int EmployeeType) {
@@ -75,7 +116,7 @@ public class EmploymentPage extends HttpServlet {
             }
             String[] skills = {"python", "ruby", "node_JS", "PHP7", "ASP_NET", "webServer", "SQLServer", "OracleDatabase", "RestfulAPIs", "Security", "Docker"};
             for (int i = 0; i < 11; i++) {
-                if (values[i]!= null)
+                if (values[i] != null)
                     Score += DB_Expert.valueOf(skills[i]).value;
             }
         } else if (EmployeeType == Extra.employeeTypes.EmployeeType.FrontEnd.getValue()) {
@@ -85,7 +126,7 @@ public class EmploymentPage extends HttpServlet {
             }
             String[] skills = {"CSS", "JS", "XHTR", "HTMLDOM", "JAVAScript", "ReactJs", "Angular", "VueJs", "jQuery", "TypeScript", "ES6", "yarn", "npm", "CSSResponsive", "json", "ajax", "materialDesign", "bootStrap", "W3Css"};
             for (int i = 0; i < 19; i++) {
-                if (values[i]!= null)
+                if (values[i] != null)
                     Score += DB_Expert.valueOf(skills[i]).value;
             }
         } else if (EmployeeType == Extra.employeeTypes.EmployeeType.FullStack.getValue()) {
@@ -95,7 +136,7 @@ public class EmploymentPage extends HttpServlet {
             }
             String[] skills = {"CSS", "JS", "reactJs", "jQuery", "mobilePrograming", "python", "ruby", "nodeJs", "PHP7", "ASP_NET", "webServer", "SQLServer", "oracleDatabase", "xamarin", "security", "docker"};
             for (int i = 0; i < 16; i++) {
-                if (values[i]!= null)
+                if (values[i] != null)
                     Score += DB_Expert.valueOf(skills[i]).value;
             }
         } else if (EmployeeType == Extra.employeeTypes.EmployeeType.NetworkSecurityExpert.getValue()) {
@@ -105,7 +146,7 @@ public class EmploymentPage extends HttpServlet {
             }
             String[] skills = {"UTM", "ISMS", "PLC", "CEH", "CISSP", "CCNA", "QOD", "HAIPE_IP", "MPLS"};
             for (int i = 0; i < 9; i++) {
-                if (values[i]!= null)
+                if (values[i] != null)
                     Score += DB_Expert.valueOf(skills[i]).value;
             }
         }

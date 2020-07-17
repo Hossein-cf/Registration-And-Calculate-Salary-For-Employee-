@@ -4,7 +4,16 @@ public class SalaryInformation {
     private boolean afternoonWorking;
     private boolean morningWorking;
     private boolean nightWorking;
+    private boolean fullTimeWorking;
     private String baseSalary;
+
+    public void setFullTimeWorking(boolean fullTimeWorking) {
+        this.fullTimeWorking = fullTimeWorking;
+    }
+
+    public boolean isFullTimeWorking() {
+        return fullTimeWorking;
+    }
 
     public boolean isAfternoonWorking() {
         return afternoonWorking;
