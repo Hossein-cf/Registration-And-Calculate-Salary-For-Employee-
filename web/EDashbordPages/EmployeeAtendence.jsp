@@ -65,7 +65,7 @@
     </div>
 </section>
 
-<section class="pane-1">
+<section class="pane-1" style="margin-left: 300px">
     <%--    1--%>
         <div class="col-75">
             <div class="container">
