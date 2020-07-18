@@ -28,6 +28,7 @@ public class ManagerLoginServlet extends HttpServlet {
         String pass = req.getParameter("pass");
 //        System.out.println(user+pass);
         if(user.equals("123456") && pass.equals("123456")) {
+
             RequestDispatcher view = req.getRequestDispatcher("ManagerDashbord.jsp");
             view.forward(req,resp);
             resp.sendRedirect("ManagerDashbord.jsp");
