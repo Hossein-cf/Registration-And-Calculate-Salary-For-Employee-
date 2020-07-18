@@ -12,7 +12,7 @@
 <html>
 <head>
 
-    <title><%out.print(request.getHttpServletMapping().getServletName());%></title>
+    <title>ManagerDashbord</title>
     <link rel="stylesheet" href="./ManagerDashbordStyle/css/dashbordStyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -25,7 +25,7 @@
         </a>
 
         <form method="post" action="EmployeeSalaryReceipt.jsp">
-            <%out.println("<input type=\"hidden\" name=\"id\" value=\""  + request.getAttribute("id") + "\">");%>
+            <%out.println("<input type=\"hidden\" name=\"id\" value=\"9819236994\">");%>
             <button type="submit">
             <a class="a-side" href="EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Salary Receipt
@@ -68,7 +68,8 @@
                 <div class="ED-pane">
                     <h1>
                         <%
-                        String employeeNumber = (String) request.getAttribute("employeeNumber");//todo
+                        String employeeNumber = (String) request.getAttribute("employeeNumber");
+                        employeeNumber = "9819236994";//todo
                             EmployeeDashboardGetData data =null;
                             if (employeeNumber != null) {
                                 data = new EmployeeDashboardGetData(employeeNumber);

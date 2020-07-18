@@ -79,6 +79,7 @@
 
                     <%
                         String id = (String) request.getAttribute("id");
+                        id="9819236994";
                         EmployeeSalaryReceiptGetData data =null;
                         if (id != null)
                             data=new EmployeeSalaryReceiptGetData(id);%>
