@@ -22,20 +22,19 @@ public class EmployeeLoginServlet extends HttpServlet {
         String pass = req.getParameter("pass");
         DBHelper dbHelper = new DBHelper();
         Employee employee = dbHelper.readEmployee(userName);
-//        RequestDispatcher requestDispatcher = req.getRequestDispatcher("EmployeeDashbord.jsp");
-//        requestDispatcher.forward(req,resp);
-        resp.sendRedirect("EmployeeDashbord.jsp");
+        if (employee != null){
+            if (pass.equals(employee.getNationalNumber())){
+                RequestDispatcher dispatcher = req.getRequestDispatcher("../web/EDashbordPages/EmployداeeDashbord.jsp");
+                req.setAttribute("employeeNumber",userName);
+                dispatcher.forward(req, resp);
 
-//        if (employee != null){
-//            if (pass.equals(employee.getNationalNumber())){
-//                resp.sendRedirect("../web/EDashbordPages/EmployeeDashbord.jsp");
-//            }else {
-//                resp.getWriter().print("User Name or Pass is incorrect ");
-//            }
-//        }else {
-//            resp.getWriter().print("User Name or Pass is incorrect ");
-//
-//        }
+            }else {
+                resp.getWriter().print("User Name or Pass is incorrect ");
+            }
+        }else {
+            resp.getWriter().print("User Name or Pass is incorrect ");
+
+        }
 
     }
 
