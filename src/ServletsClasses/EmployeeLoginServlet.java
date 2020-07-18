@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.IllegalStateException;
 
-@WebServlet("/EmployeeLoginServlet")
+//@WebServlet("/EmployeeLoginServlet")
 public class EmployeeLoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, IllegalStateException {
@@ -24,8 +24,9 @@ public class EmployeeLoginServlet extends HttpServlet {
             if (pass.equals(employee.getNationalNumber()+"")){
                 RequestDispatcher dispatcher = req.getRequestDispatcher("./EDashbordPages/EmployeeDashbord.jsp");
                 req.setAttribute("id",userName);
+                System.out.println("EmployeeLoginServlet.doPost");
+                System.out.println("userName = " + userName);;
                 dispatcher.forward(req, resp);
-
             }else {
                 resp.getWriter().print("User Name or Pass is incorrect ");
             }

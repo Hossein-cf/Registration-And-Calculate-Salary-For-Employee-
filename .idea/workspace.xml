@@ -5,24 +5,29 @@
       <artifact name="FinalProjectForSecondTerm:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4836c292-bc3e-4eb3-8232-dbf8deb959fb" name="Default Changelist" comment="test">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqljdbc42.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="806ec27c-b462-4e9e-b315-4469a875d5f6" name="Default Changelist" comment=" trick 1.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FinalProjectForSecondTerm_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FinalProjectForSecondTerm_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FinalProjectForSecondTerm_war_exploded/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Extra/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Extra/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Extra/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Extra/Receipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServletsClasses/CompanyMembers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServletsClasses/CompanyMembers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServletsClasses/IssuanceReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServletsClasses/IssuanceReceipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServletsClasses/ManagerLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServletsClasses/ManagerLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/EDashbordPages/EmployeeAtendence.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/EDashbordPages/EmployeeAtendence.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/MDashbordPages/IssuanceReceiptPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/MDashbordPages/IssuanceReceiptPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/MDashbordPages/Receipt.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/MDashbordPages/Receipt.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServletsClasses/EmployeeLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServletsClasses/EmployeeLoginServlet.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +66,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1dggjjpJyBrtWCHD10yVFdESrP2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -80,18 +86,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Hossein\IdeaProjects\Registration-And-Calculate-Salary-For-Employee-\src\Extra" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.33" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.33" ALTERNATIVE_JRE_ENABLED="false">
@@ -228,13 +222,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
