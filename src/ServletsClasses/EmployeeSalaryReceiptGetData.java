@@ -5,6 +5,10 @@ import Extra.*;
 import java.util.ArrayList;
 
 public class EmployeeSalaryReceiptGetData {
+    public EmployeeSalaryReceiptGetData(String employeeNumber) {
+        this.employeeNumber = employeeNumber;
+    }
+
     String employeeNumber="1" ;
     DBHelper dbHelper = new DBHelper();
     ArrayList<Receipt> receipt = dbHelper.readReceipt(employeeNumber);

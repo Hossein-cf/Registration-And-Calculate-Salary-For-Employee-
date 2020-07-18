@@ -23,7 +23,7 @@ public class EmployeeLoginServlet extends HttpServlet {
         if (employee != null){
             if (pass.equals(employee.getNationalNumber()+"")){
                 RequestDispatcher dispatcher = req.getRequestDispatcher("./EDashbordPages/EmployeeDashbord.jsp");
-                req.setAttribute("employeeNumber",userName);
+                req.setAttribute("id",userName);
                 dispatcher.forward(req, resp);
 
             }else {
