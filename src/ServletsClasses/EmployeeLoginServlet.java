@@ -3,6 +3,7 @@ package ServletsClasses;
 import Extra.DBHelper;
 import Extra.Employee;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,16 +22,20 @@ public class EmployeeLoginServlet extends HttpServlet {
         String pass = req.getParameter("pass");
         DBHelper dbHelper = new DBHelper();
         Employee employee = dbHelper.readEmployee(userName);
-        if (employee != null){
-            if (pass.equals(employee.getNationalNumber())){
-                resp.sendRedirect("../web/EDashbordPages/EmployeeDashbord.jsp");
-            }else {
-                resp.getWriter().print("User Name or Pass is incorrect ");
-            }
-        }else {
-            resp.getWriter().print("User Name or Pass is incorrect ");
+//        RequestDispatcher requestDispatcher = req.getRequestDispatcher("EmployeeDashbord.jsp");
+//        requestDispatcher.forward(req,resp);
+        resp.sendRedirect("EmployeeDashbord.jsp");
 
-        }
+//        if (employee != null){
+//            if (pass.equals(employee.getNationalNumber())){
+//                resp.sendRedirect("../web/EDashbordPages/EmployeeDashbord.jsp");
+//            }else {
+//                resp.getWriter().print("User Name or Pass is incorrect ");
+//            }
+//        }else {
+//            resp.getWriter().print("User Name or Pass is incorrect ");
+//
+//        }
 
     }
 

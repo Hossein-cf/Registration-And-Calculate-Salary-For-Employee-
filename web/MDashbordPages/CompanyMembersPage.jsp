@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-<body>
+<>
 <section id="sideMenu">
     <nav>
         <a class="a-side" href="../ManagerDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
@@ -23,11 +23,14 @@
         <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
                                                                          aria-hidden="true"></i>
             Employment</a>
-        <a class="a-side" href="../MDashbordPages/IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x"
+                                                                              aria-hidden="true"></i>
             Issuance Receipt</a>
-        <a class="a-side" href="../MDashbordPages/DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x"
+                                                                            aria-hidden="true"></i>
             Daily Records</a>
-        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x"
+                                                                              aria-hidden="true"></i>
             Company Members</a>
     </nav>
 </section>
@@ -49,11 +52,10 @@
         </h1>
 
         <p>
-            You can check out numbers of Employee that you hired        </p>
+            You can check out numbers of Employee that you hired </p>
 
     </div>
 </section>
-
 
 
 <%--<section class="pane-1" >--%>
@@ -105,53 +107,58 @@
 <%--</section>--%>
 <%--1--%>
 <section class="pane-1-members">
+    <form action="${pageContext.request.contextPath}/CompanyMembers" method="post">
+        <div class="row-in-pane">
 
-    <div class="row-in-pane">
+            <div class="inline-row-1-members">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
 
-        <div class="inline-row-1-members">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
+                            <img src="../ManagerDashbordStyle/pics/front-end.png" alt="Avatar"
+                                 style="width:300px;height:300px;">
 
-                        <img src="../ManagerDashbordStyle/pics/front-end.png" alt="Avatar" style="width:300px;height:300px;">
-
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Numbers of Front End Employee</h1>
+                            <p>0</p>
+                        </div>
                     </div>
-                    <div class="flip-card-back">
-                        <h1>Numbers of Front End Employee</h1>
-                        <p>0</p>
+                </div>
+            </div>
+
+            <div class="inline-row-1-members">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../ManagerDashbordStyle/pics/back-end.png" alt="Avatar"
+                                 style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Numbers of Back End Employee</h1>
+                            <p>0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inline-row-1-members">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../ManagerDashbordStyle/pics/fullstack-logo-light.jpg" alt="Avatar"
+                                 style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Numbers of full stack Employee</h1>
+                            <p>0</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="inline-row-1-members">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="../ManagerDashbordStyle/pics/back-end.png" alt="Avatar" style="width:300px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>Numbers of Back End Employee</h1>
-                        <p>0</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="inline-row-1-members">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="../ManagerDashbordStyle/pics/fullstack-logo-light.jpg" alt="Avatar" style="width:300px;height:300px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>Numbers of full stack Employee</h1>
-                        <p>0</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </form>
 </section>
+
 <%--2--%>
 <section class="pane-1-members">
 
@@ -177,7 +184,8 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../ManagerDashbordStyle/pics/Security.jpg" alt="Avatar" style="width:300px;height:300px;">
+                        <img src="../ManagerDashbordStyle/pics/Security.jpg" alt="Avatar"
+                             style="width:300px;height:300px;">
                     </div>
                     <div class="flip-card-back">
                         <h1>Numbers of NetWork Security Expert</h1>

@@ -64,7 +64,7 @@
     <div class="row">
         <div class="col-75">
             <div class="container">
-                <form action="">
+                <form action="${pageContext.request.contextPath}/CreateReceipt" method="post" >
 
                     <div class="row">
                         <div class="col-50">

@@ -113,7 +113,7 @@
 
             <div class="col-75">
                 <div class="container">
-                    <form  name="IssuanceReceipt" action="Receipt.jsp">
+                    <form  name="IssuanceReceipt" action="">
 
                         <div class="row">
                             <div class="issu">

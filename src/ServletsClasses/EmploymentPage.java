@@ -4,12 +4,14 @@ import Extra.*;
 import Extra.employeeTypes.*;
 import com.sun.deploy.net.HttpRequest;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/EmploymentPage")
 public class EmploymentPage extends HttpServlet {
@@ -22,13 +24,14 @@ public class EmploymentPage extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Employee employee = new Employee();
+//        employee.setEmployeeNumber(String.valueOf(req.getAttribute("EmployeeNumber")));
         employee.setName(req.getParameter("firstName"));
         employee.setLastName(req.getParameter("lastName"));
         employee.setFatherName(req.getParameter("FatherName"));
         employee.setNationalNumber(Long.parseLong(req.getParameter("NationalCode")));
         System.out.println();
         if (req.getParameter("Gender").equals("1"))
-        employee.setGender(Gender.Male.name());
+            employee.setGender(Gender.Male.name());
         else employee.setGender(Gender.Female.name());
         employee.setPostalCode(req.getParameter("PostalCode"));
         employee.setPhoneNumber(req.getParameter("PhoneNumber"));
@@ -43,10 +46,11 @@ public class EmploymentPage extends HttpServlet {
         employee.setBirthPlace(req.getParameter("Born"));
         employee.setNumberOfChild(Integer.parseInt(req.getParameter("number of children")));
 
+//
 
-        if(req.getParameter("ELevelOfEducation").equals("2"))
+        if (req.getParameter("ELevel").equals("2"))
             employee.setEmployeeLevel(EmployeeLevel.Mid_level.name());
-        else if(req.getParameter("ELevelOfEducation").equals("1"))
+        else if (req.getParameter("ELevel").equals("1"))
             employee.setEmployeeLevel(EmployeeLevel.Junior.name());
         else
             employee.setEmployeeLevel(EmployeeLevel.Senior.name());
@@ -62,7 +66,13 @@ public class EmploymentPage extends HttpServlet {
             salaryInformation.setNightWorking(true);
         else
             salaryInformation.setFullTimeWorking(true);
-        req.getParameter("ELevel");
+        if (req.getParameter("ELevelOfEducation").equals("1"))
+            jobInformation.setCertification(ELevelOfEducation.Diploma.name());
+        else if (req.getParameter("ELevelOfEducation").equals("2"))
+            jobInformation.setCertification(ELevelOfEducation.Bachelor.name());
+        else
+            jobInformation.setCertification(ELevelOfEducation.MA.name());
+
         String git = req.getParameter("Git");
 
         String telle_working = req.getParameter("Telle Working");
@@ -101,7 +111,16 @@ public class EmploymentPage extends HttpServlet {
         jobInformation.setSkills("full");
         employee.setJobInformation(jobInformation);
         employee.setSalaryInformation(salaryInformation);
+        String number = GenerateEmployeeNumber.generateNumber();
+
+        employee.setEmployeeNumber(number);
+
         new DBHelper().insertEmployee(employee);
+        PrintWriter out = resp.getWriter();
+        out.print("Employee Number :" + number);
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../src/ServletsClasses/EmploymentPage.java");
+//        request.setAttribute("EmployeeNumber",number);
+//        requestDispatcher.forward(request,response);
 
     }
 
