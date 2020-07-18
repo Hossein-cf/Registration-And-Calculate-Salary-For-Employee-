@@ -32,6 +32,14 @@
         <servlet-name>RedirectEmployeeDashbord</servlet-name>
         <url-pattern>/EmployeeDashbord.jsp</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>dashbord</servlet-name>
+        <servlet-class>ServletsClasses.EmployeeLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dashbord</servlet-name>
+        <url-pattern>/EmployeeLoginServlet</url-pattern>
+    </servlet-mapping>
     //ManagerDashboard
     <servlet>
         <servlet-name>RedirectManagerDashbord</servlet-name>
