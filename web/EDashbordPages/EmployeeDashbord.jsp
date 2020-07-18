@@ -24,9 +24,12 @@
             DashBord
         </a>
 
-        <a class="a-side" href="EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <form method="post" action="EmployeeSalaryReceipt.jsp">
+            <%out.println("<input type=\"hidden\" name=\"id\" value=\""  + request.getAttribute("id") + "\">");%>
+            <button type="submit">
+            <a class="a-side" href="EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Salary Receipt
-        </a>
+        </a></button></form>
 
         <a class="a-side" href="EmployeeAtendence.jsp"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Attendance

@@ -12,6 +12,20 @@ public class RedirectEDashSalary extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher dispatcher = req.getRequestDispatcher("./EDashbordPages/EmployeeSalaryReceipt.jsp");
+        String id = (String) req.getAttribute("id");
+        System.out.println("RedirectEDashSalary.doGet");
+        System.out.println("id = " + id);
+        dispatcher.forward(req, resp);
+
+
+
+    }
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher dispatcher = req.getRequestDispatcher("./EDashbordPages/EmployeeSalaryReceipt.jsp");
+        String id = (String) req.getAttribute("id");
+        System.out.println("RedirectEDashSalary.doPost");
+        System.out.println("id = " + id);
         dispatcher.forward(req, resp);
 
 
