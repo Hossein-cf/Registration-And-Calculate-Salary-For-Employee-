@@ -118,11 +118,15 @@
 
             <div class="test">
                 <div class="t">
-                    <input style="width: 200px" name="firstName" placeholder="Born palce" type="text"/>
+                    <input style="width: 200px" name="Born" placeholder="Born palce" type="text"/>
                 </div>
 
                 <div class="t">
-                    <div class="custom-select Gender" id="Gender" style="width:200px;margin-right: 10px;">
+                    <input style="width: 100px;padding-right: 10px" name="Age" placeholder="Age" type="text"/>
+                </div>
+
+                <div class="t">
+                    <div class="custom-select Gender" id="Gender" style="width:200px;padding-right: 10px;">
                         <select>
                             <option value="0">Gender :</option>
                             <option value="1">Male</option>

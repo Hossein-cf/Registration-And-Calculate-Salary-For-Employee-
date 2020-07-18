@@ -18,7 +18,7 @@
 <body>
 <section id="sideMenu" style="width: 275px">
     <nav>
-        <a class="a-side" href="#"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../EDashbordPages/EmployeeDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
             DashBord
         </a>
 

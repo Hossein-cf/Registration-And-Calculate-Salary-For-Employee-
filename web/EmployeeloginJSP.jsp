@@ -38,7 +38,7 @@
                 <img src="./ManagerLoginStyle/images/img-01.png" alt="IMG">
             </div>
 
-            <form name="" action="" method="post" class="login100-form validate-form">
+            <form name="EmployeeLogin" action="./EDashbordPages/EmployeeDashbord.jsp" method="post" class="login100-form validate-form">
 					<span class="login100-form-title">
 						Login as Employee
 					</span>
@@ -60,10 +60,10 @@
                 </div>
 
                 <div  class="container-login100-form-btn">
-                    <button  class="login100-form-btn">
+                    <button  class="login100-form-btn" >
                         Login
                     </button>
-                    <a href="./EDashbordPages/EmployeeDashbord.jsp"> sgo</a>
+
 
                 </div>
 

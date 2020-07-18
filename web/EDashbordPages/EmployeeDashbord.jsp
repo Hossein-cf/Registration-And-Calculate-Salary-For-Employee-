@@ -82,9 +82,7 @@
 
             <div class="inline-row-1" style="width: 600px;">
                 <div class="ED-pane">
-                    <h1>
-                        hh
-                    </h1>
+
 
 
                 </div>
