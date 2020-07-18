@@ -1,6 +1,8 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
-<%@ page import="java.time.LocalDateTime" %><%--
+<%@ page import="java.time.LocalDateTime" %>
+<%@ page import="Extra.Employee" %>
+<%@ page import="Extra.Receipt" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/3/2020
@@ -59,7 +61,10 @@
 </section>
 
 <section class="pane-1-Receipt">
-
+<%
+    Employee employee = (Employee) request.getAttribute("employee");
+    Receipt receipt = (Receipt) request.getAttribute("receipt");
+%>
 
     <div class="row">
         <div class="col-75">
@@ -70,13 +75,13 @@
                         <div class="col-50">
                             <h3>Your Last receipt</h3>
                             <label for="fname"> Full Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="">
+                            <input type="text" id="fname" name="firstname" value="<% out.print(employee.getName());  %>" placeholder="">
                             <label for="email"> Employee Code</label>
                             <input type="text" id="email" name="email" placeholder="">
                             <label for="adr"> Address</label>
-                            <input type="text" id="adr" name="address" placeholder="">
+                            <input type="text" id="adr" name="address" value="<% out.print(employee.getAddress());%>" placeholder="">
                             <label for="city"> Woking Time</label>
-                            <input type="text" id="city" name="city" placeholder="">
+                            <input type="text" id="city" name="city"value="<%out.print(receipt.getWorkTime());%>" placeholder="">
 
                             <div class="row">
                                 <div class="col-50">
@@ -85,7 +90,7 @@
                                 </div>
                                 <div class="col-50">
                                     <label for="level">Employee Level</label>
-                                    <input type="text" id="level" name="level" placeholder="">
+                                    <input type="text" id="level" name="level" value="<%out.print(employee.getEmployeeLevel());%>" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -98,22 +103,22 @@
 
 
                             <label for="baseSalary">Base Salary</label>
-                            <input type="text" id="baseSalary" name="baseSalary" placeholder="">
+                            <input type="text" id="baseSalary" name="baseSalary" value="<%out.print(employee.getSalaryInformation().getBaseSalary());%>" placeholder="">
                             <label for="overtime">amount of over time</label>
-                            <input type="text" id="overtime" name="overtime" placeholder="">
+                            <input type="text" id="overtime" name="overtime" value="<%out.print(receipt.getOverWorkTime());%>" placeholder="">
                             <label for="deducted"> deducted amount</label>
-                            <input type="text" id="deducted" name="deducted" placeholder="">
+                            <input type="text" id="deducted" name="deducted" value="<%out.print(0);%>" placeholder="">
                             <label for="deducted"> deducted amount</label>
-                            <input type="text" id="deducted1" name="deducted" placeholder="">
+                            <input type="text" id="deducted1" name="deducted" value="<%%>" placeholder="">
 
                             <div class="row" style="margin-top: 20px">
                                 <div class="col-50">
                                     <label for="experience">Added amount for work experience</label>
-                                    <input type="text" id="experience" name="experience" placeholder="">
+                                    <input type="text" id="experience" name="experience" value="<%%>" placeholder="">
                                 </div>
                                 <div class="col-50">
                                     <label for="FinalSalary">Final Salary</label>
-                                    <input type="text" id="FinalSalary" name="FinalSalary" placeholder="">
+                                    <input type="text" id="FinalSalary" name="FinalSalary" value="<%receipt.getFinalSalary();%>" placeholder="">
                                 </div>
                             </div>
                         </div>

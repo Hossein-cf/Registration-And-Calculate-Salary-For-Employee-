@@ -25,15 +25,15 @@
 <body>
 <section id="sideMenu" style="width: 275px">
     <nav>
-        <a class="a-side" href="../EDashbordPages/EmployeeDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="EmployeeDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
             DashBord
         </a>
 
-        <a class="a-side" href="../EDashbordPages/EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Salary Receipt
         </a>
 
-        <a class="a-side" href="../EDashbordPages/EmployeeAtendence.jsp"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="#"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Attendance
         </a>
 

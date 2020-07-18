@@ -79,7 +79,9 @@
         </h2>
 
         <p>
-
+        <%
+            request.getAttribute("personalInfo");
+        %>
         </p>
 
         <br>
@@ -91,7 +93,9 @@
         <br>
 
         <p>
-
+            <%
+                request.getAttribute("jobInfo");
+            %>
         </p>
 
         <br>
@@ -120,12 +124,12 @@
 
                                     <div class="col-50" >
                                         <label for="state">Over Time</label>
-                                        <input style="width: 200px" type="text" id="state" name="state" placeholder=".">
+                                        <input style="width: 200px" type="text" id="state" name="state" value="<%request.getAttribute("overTime")%>" placeholder=".">
                                     </div>
 
                                     <div class="col-50">
                                         <label for="zip">Vacation </label>
-                                        <input  style="width: 200px"  type="text" id="zip" name="zip" placeholder=".">
+                                        <input  style="width: 200px"  type="text" id="zip" name="zip" value="0" placeholder=".">
                                     </div>
 
 
@@ -134,7 +138,7 @@
 
                                     <div class="col-50" >
                                         <label for="expyear">Absence Days</label>
-                                        <input  style="width: 200px"   type="text" id="expyear" name="expyear" placeholder=".">
+                                        <input  style="width: 200px"   type="text" id="expyear" name="expyear" value="0" placeholder=".">
                                     </div>
 
 

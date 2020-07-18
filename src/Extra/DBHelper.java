@@ -126,7 +126,7 @@ public class DBHelper {
 
     public boolean insertReceipt(Receipt receipt, String EmployeeNumber) {
         isConnectionToTheDB();
-        String query = "INSERT INTO [dbo].[tblReceipt]([IDEmployee], [FinalSalary], [RightToHousing], [Insurance], [Tax], [WorkTime], [OverTimeWork], [Premium], [Date], [Condition],[Serial], [yearSalary], [deductedAmount]) VALUES ('" + getIDEmployee(EmployeeNumber) + "','" + receipt.getFinalSalary() + "','" + receipt.getRightToHousing() + "','" + receipt.getInsurance() + "','" + receipt.getTax() + "','" + receipt.getWorkTime() + "','" + receipt.getOverWorkTime() + "','" + receipt.getPremium() + "','" + receipt.getDate() + "','" + receipt.isCondition() + "','" + receipt.getSerial() + "','" + receipt.getYearSalary() + "','" + receipt.getDeductedAmount() + "');";
+        String query = "INSERT INTO [dbo].[tblReceipt]([IDEmployee], [FinalSalary], [RightToHousing], [Insurance], [Tax], [WorkTime], [OverTimeWork], [Premium], [Date], [Condition],[Serial], [yearSalary], [deductedAmount],[Date1]) VALUES ('" + getIDEmployee(EmployeeNumber) + "','" + receipt.getFinalSalary() + "','" + receipt.getRightToHousing() + "','" + receipt.getInsurance() + "','" + receipt.getTax() + "','" + receipt.getWorkTime() + "','" + receipt.getOverWorkTime() + "','" + receipt.getPremium() + "','" + new java.util.Date(2, 2, 2) + "','" + receipt.isCondition() + "','" + receipt.getSerial() + "','" + receipt.getYearSalary() + "','" + receipt.getDeductedAmount() + "','" + receipt.getDate() + "');";
         try {
             statement.executeUpdate(query);
             isClosedTheDB();
@@ -142,7 +142,7 @@ public class DBHelper {
     public boolean insertDailyRecord(DailyRecords dailyRecords, String EmployeeNumber) {
         isConnectionToTheDB();
         try {
-            String query = "INSERT INTO[dbo].[tblDailyRecord]( [IDEmployee], [WorkTime], [EnterTime], [ExitTime], [OverTimeWork], [StartOverTimeWork], [EndOverTmeWork], [HolidayWorkTime],[EnterTime1], [ExitTime1], [StartOverTimeWork1], [EndOverTmeWork1])VALUES('" + getIDEmployee(EmployeeNumber) + "','" + dailyRecords.getWorkTime() + "','" + new Time(2,2,2) + "','" + new Time(2,2,2) + "','" + dailyRecords.getOverworkTime() + "','" + new Time(2,2,2) + "','" +new Time(2,2,2) + "','" + dailyRecords.getHolidayWorkTime() + "','" + dailyRecords.getEnterTime() + "','" + dailyRecords.getExitTime() + "','" + dailyRecords.getStartOverWorkTime() + "','"+dailyRecords.getEndOverWorkTime()+"');";
+            String query = "INSERT INTO[dbo].[tblDailyRecord]( [IDEmployee], [WorkTime], [EnterTime], [ExitTime], [OverTimeWork], [StartOverTimeWork], [EndOverTmeWork], [HolidayWorkTime],[EnterTime1], [ExitTime1], [StartOverTimeWork1], [EndOverTmeWork1])VALUES('" + getIDEmployee(EmployeeNumber) + "','" + dailyRecords.getWorkTime() + "','" + new Time(2, 2, 2) + "','" + new Time(2, 2, 2) + "','" + dailyRecords.getOverworkTime() + "','" + new Time(2, 2, 2) + "','" + new Time(2, 2, 2) + "','" + dailyRecords.getHolidayWorkTime() + "','" + dailyRecords.getEnterTime() + "','" + dailyRecords.getExitTime() + "','" + dailyRecords.getStartOverWorkTime() + "','" + dailyRecords.getEndOverWorkTime() + "');";
 
             statement.executeUpdate(query);
             isClosedTheDB();
@@ -323,7 +323,7 @@ public class DBHelper {
                 receipt.setWorkTime(resultSet.getString("WorkTime"));
                 receipt.setOverWorkTime(resultSet.getString("OverTimeWork"));
                 receipt.setPremium(resultSet.getString("Premium"));
-                receipt.setDate(LocalDate.parse(resultSet.getString("Date")));
+                receipt.setDate((resultSet.getString("Date1")));
                 receipt.setSerial(resultSet.getLong("Serial"));
 //                [Serial], [yearSalary], [deductedAmount]
                 receipt.setYearSalary(resultSet.getString("yearSalary"));

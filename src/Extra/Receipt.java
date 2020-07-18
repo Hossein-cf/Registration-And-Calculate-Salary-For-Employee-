@@ -1,6 +1,7 @@
 package Extra;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Receipt {
 
@@ -11,7 +12,7 @@ public class Receipt {
     private String workTime;
     private String overWorkTime;
     private String Premium;
-    private LocalDate date;
+    private String date;
     private boolean condition;
     private long serial;
     private  String yearSalary;
@@ -100,11 +101,11 @@ public class Receipt {
         Premium = premium;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
