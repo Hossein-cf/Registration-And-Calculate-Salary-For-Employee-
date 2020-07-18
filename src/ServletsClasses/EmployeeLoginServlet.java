@@ -3,6 +3,7 @@ package ServletsClasses;
 import Extra.DBHelper;
 import Extra.Employee;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +24,10 @@ public class EmployeeLoginServlet extends HttpServlet {
         Employee employee = dbHelper.readEmployee(userName);
         if (employee != null){
             if (pass.equals(employee.getNationalNumber())){
-                resp.sendRedirect("../web/EDashbordPages/EmployeeDashbord.jsp");
+                RequestDispatcher dispatcher = req.getRequestDispatcher("../web/EDashbordPages/EmployداeeDashbord.jsp");
+                req.setAttribute("employeeNumber",userName);
+                dispatcher.forward(req, resp);
+
             }else {
                 resp.getWriter().print("User Name or Pass is incorrect ");
             }
