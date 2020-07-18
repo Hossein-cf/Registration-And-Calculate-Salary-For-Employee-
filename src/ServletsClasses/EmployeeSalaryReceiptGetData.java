@@ -16,11 +16,34 @@ public class EmployeeSalaryReceiptGetData {
         employeeCode = employeeNumber;
         address = employee.getAddress();
         baseSalary = salaryInformation.getBaseSalary();
-        finalSalary = receipt.get(receipt.size() - 1).getFinalSalary();
-        workTime = receipt.get(receipt.size() - 1).getWorkTime();
-        overTimeWork = receipt.get(receipt.size() - 1).getOverWorkTime();
-        addAmountForWorkSalary = String.valueOf(Integer.parseInt(receipt.get(receipt.size() - 1).getYearSalary()) - Integer.parseInt(salaryInformation.getBaseSalary()));
-        employeeType = jobInformation.getEmployeeType();
+        if (receipt.size()>0) {
+            finalSalary = receipt.get(receipt.size() - 1).getFinalSalary();
+            workTime = receipt.get(receipt.size() - 1).getWorkTime();
+            overTimeWork = receipt.get(receipt.size() - 1).getOverWorkTime();
+            addAmountForWorkSalary = String.valueOf(Float.parseFloat(receipt.get(receipt.size() - 1).getYearSalary()) - Float.parseFloat(salaryInformation.getBaseSalary()));
+        }
+        else{
+            finalSalary = receipt.get(receipt.size()).getFinalSalary();
+        workTime = receipt.get(receipt.size()).getWorkTime();
+        overTimeWork = receipt.get(receipt.size()).getOverWorkTime();
+        addAmountForWorkSalary = String.valueOf(Integer.parseInt(receipt.get(receipt.size()).getYearSalary()) - Integer.parseInt(salaryInformation.getBaseSalary()));
+    }
+    employeeType = jobInformation.getEmployeeType();
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeSalaryReceiptGetDataTest{" +
+                "fullName='" + fullName + '\'' +
+                ", employeeCode='" + employeeCode + '\'' +
+                ", address='" + address + '\'' +
+                ", baseSalary='" + baseSalary + '\'' +
+                ", finalSalary='" + finalSalary + '\'' +
+                ", workTime='" + workTime + '\'' +
+                ", overTimeWork='" + overTimeWork + '\'' +
+                ", addAmountForWorkSalary='" + addAmountForWorkSalary + '\'' +
+                ", employeeType='" + employeeType + '\'' +
+                '}';
     }
 
     DBHelper dbHelper;
@@ -38,7 +61,7 @@ public class EmployeeSalaryReceiptGetData {
     String addAmountForWorkSalary;
     String employeeType;
 
-
+//
 //    String fullName = employee.getName()+employee.getLastName();
 //    String employeeCode = employeeNumber;
 //    String address = employee.getAddress();

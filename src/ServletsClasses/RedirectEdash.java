@@ -13,6 +13,7 @@ public class RedirectEdash extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("./EDashbordPages/EmployeeDashbord.jsp");
+        System.out.println("RedirectEdash.doGet");
         dispatcher.forward(req, resp);
 
     }
