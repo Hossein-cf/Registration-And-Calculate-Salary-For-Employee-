@@ -5,6 +5,7 @@ import Extra.JobInformation;
 import Extra.employeeTypes.EmployeeType;
 
 import javax.jws.WebService;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,6 +37,7 @@ public class CompanyMembers extends HttpServlet {
             } else if (information.getEmployeeType().equals(EmployeeType.FrontEnd.name())) {
                 numberOFFront++;
             }
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("../web/MDashbordPages/CompanyMembersPage.jsp");
             all = numberOFBack + numberOfBD + numberOFFront + numberOfFulStack + numberOFNetwork;
             req.setAttribute("numberOFBack", numberOFBack);
             req.setAttribute("numberOfBD", numberOfBD);
@@ -43,6 +45,8 @@ public class CompanyMembers extends HttpServlet {
             req.setAttribute("numberOfFulStack", numberOfFulStack);
             req.setAttribute("numberOFNetwork", numberOFNetwork);
             req.setAttribute("all", all);
+
+            requestDispatcher.forward(req,resp);
 
         }
     }
