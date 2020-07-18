@@ -3,6 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    //EmployeeDashboard
     <servlet>
         <servlet-name>RedirectEDashSalary</servlet-name>
         <servlet-class>ServletsClasses.RedirectEDashSalary</servlet-class>
@@ -20,6 +22,56 @@
     <servlet-mapping>
         <servlet-name>RedirectEDashAtt</servlet-name>
         <url-pattern>/EmployeeAtendence.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RedirectEmployeeDashbord</servlet-name>
+        <servlet-class>ServletsClasses.RedirectEdash</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectEmployeeDashbord</servlet-name>
+        <url-pattern>/EmployeeDashbord.jsp</url-pattern>
+    </servlet-mapping>
+    //ManagerDashboard
+    <servlet>
+        <servlet-name>RedirectManagerDashbord</servlet-name>
+        <servlet-class></servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectManagerDashbord</servlet-name>
+        <url-pattern>/ManagerDashbord.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RedirectEmploymentPage</servlet-name>
+        <servlet-class></servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectEmploymentPage</servlet-name>
+        <url-pattern>/EmploymentPage.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RedirectIssuanceReceiptPage</servlet-name>
+        <servlet-class></servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectIssuanceReceiptPage</servlet-name>
+        <url-pattern>/IssuanceReceiptPage.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RedirectDailyRecordsPage</servlet-name>
+        <servlet-class></servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectDailyRecordsPage</servlet-name>
+        <url-pattern>/DailyRecordsPage.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RedirectCompanyMembersPage</servlet-name>
+        <servlet-class></servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectCompanyMembersPage</servlet-name>
+        <url-pattern>/CompanyMembersPage.jsp</url-pattern>
     </servlet-mapping>
 
 </web-app>

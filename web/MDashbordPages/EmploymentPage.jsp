@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>Employment</title>
-    <link rel="stylesheet" href="../ManagerDashbordStyle/css/dashbordStyle.css">
+    <link rel="stylesheet" href="./ManagerDashbordStyle/css/dashbordStyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="../ManagerDashbordStyle/css/employmentStyle.css">
@@ -24,16 +24,16 @@
 
 <section id="sideMenu">
     <nav>
-        <a class="a-side" href="../ManagerDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="ManagerDashbord.jsp"><i class="fa fa-tachometer fa-2x" aria-hidden="true"></i>
             DashBord</a>
-        <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
+        <a class="a-side" href="#"><i class="fa fa-briefcase fa-2x"
                                                                          aria-hidden="true"></i>
             Employment</a>
-        <a class="a-side" href="../MDashbordPages/IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Issuance Receipt</a>
-        <a class="a-side" href="../MDashbordPages/DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Daily Records</a>
-        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
             Company Members</a>
     </nav>
 </section>
