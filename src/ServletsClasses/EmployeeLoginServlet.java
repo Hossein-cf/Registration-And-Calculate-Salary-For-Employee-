@@ -14,8 +14,6 @@ import java.lang.IllegalStateException;
 
 @WebServlet("/EmployeeLoginServlet")
 public class EmployeeLoginServlet extends HttpServlet {
-
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, IllegalStateException {
         String userName = req.getParameter("userName");
@@ -23,8 +21,8 @@ public class EmployeeLoginServlet extends HttpServlet {
         DBHelper dbHelper = new DBHelper();
         Employee employee = dbHelper.readEmployee(userName);
         if (employee != null){
-            if (pass.equals(employee.getNationalNumber())){
-                RequestDispatcher dispatcher = req.getRequestDispatcher("../web/EDashbordPages/EmployداeeDashbord.jsp");
+            if (pass.equals(employee.getNationalNumber()+"")){
+                RequestDispatcher dispatcher = req.getRequestDispatcher("./EDashbordPages/EmployeeDashbord.jsp");
                 req.setAttribute("employeeNumber",userName);
                 dispatcher.forward(req, resp);
 

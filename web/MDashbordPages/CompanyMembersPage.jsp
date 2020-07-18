@@ -121,7 +121,8 @@
                         </div>
                         <div class="flip-card-back">
                             <h1>Numbers of Front End Employee</h1>
-                            <p>0</p>
+                            <p><% out.print(request.getAttribute("numberOFFront"));%></p>
+
                         </div>
                     </div>
                 </div>
@@ -136,7 +137,7 @@
                         </div>
                         <div class="flip-card-back">
                             <h1>Numbers of Back End Employee</h1>
-                            <p>0</p>
+                            <p><% out.print(request.getAttribute("numberOFBack"));%></p>
                         </div>
                     </div>
                 </div>
@@ -150,7 +151,8 @@
                         </div>
                         <div class="flip-card-back">
                             <h1>Numbers of full stack Employee</h1>
-                            <p>0</p>
+                            <p><% out.print(request.getAttribute("numberOfFulStack"));%></p>
+
                         </div>
                     </div>
                 </div>
@@ -174,7 +176,8 @@
                     </div>
                     <div class="flip-card-back">
                         <h1>Numbers of Data Base Expert</h1>
-                        <p>0</p>
+                        <p><%out.print(request.getAttribute("numberOfBD"));%></p>
+
                     </div>
                 </div>
             </div>
@@ -189,7 +192,8 @@
                     </div>
                     <div class="flip-card-back">
                         <h1>Numbers of NetWork Security Expert</h1>
-                        <p>0</p>
+                        <p><% out.print(request.getAttribute("numberOFNetwork"));%></p>
+
                     </div>
                 </div>
             </div>
@@ -202,7 +206,9 @@
                     </div>
                     <div class="flip-card-back">
                         <h1>Numbers of App Developer</h1>
-                        <p>0</p>
+                        <p><% out.print(request.getAttribute("all"));%></p>
+                        = numberOFBack + + + + ;
+
                     </div>
                 </div>
             </div>

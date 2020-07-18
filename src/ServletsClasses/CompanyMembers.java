@@ -37,12 +37,13 @@ public class CompanyMembers extends HttpServlet {
                 numberOFFront++;
             }
             all = numberOFBack + numberOfBD + numberOFFront + numberOfFulStack + numberOFNetwork;
-            req.setAttribute("numberOFBack",numberOFBack);
-req.setAttribute("numberOfBD",numberOfBD);
-req.setAttribute("numberOFFront",numberOFFront);
-req.setAttribute("numberOfFulStack",numberOfFulStack);
-req.setAttribute("numberOFNetwork",numberOFNetwork);
-req.setAttribute("all",all);
+            req.setAttribute("numberOFBack", numberOFBack);
+            req.setAttribute("numberOfBD", numberOfBD);
+            req.setAttribute("numberOFFront", numberOFFront);
+            req.setAttribute("numberOfFulStack", numberOfFulStack);
+            req.setAttribute("numberOFNetwork", numberOFNetwork);
+            req.setAttribute("all", all);
+
         }
     }
 }

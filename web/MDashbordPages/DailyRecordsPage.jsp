@@ -1,4 +1,5 @@
-<%--
+<%@ page import="Extra.Employee" %>
+<%@ page import="Extra.Person" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/7/2020
@@ -23,11 +24,14 @@
         <a class="a-side" href="../MDashbordPages/EmploymentPage.jsp"><i class="fa fa-briefcase fa-2x"
                                                                          aria-hidden="true"></i>
             Employment</a>
-        <a class="a-side" href="../MDashbordPages/IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/IssuanceReceiptPage.jsp"><i class="fa fa-list-alt fa-2x"
+                                                                              aria-hidden="true"></i>
             Issuance Receipt</a>
-        <a class="a-side" href="../MDashbordPages/DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/DailyRecordsPage.jsp"> <i class="fa fa-check-square-o fa-2x"
+                                                                            aria-hidden="true"></i>
             Daily Records</a>
-        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="../MDashbordPages/CompanyMembersPage.jsp"> <i class="fa fa-building fa-2x"
+                                                                              aria-hidden="true"></i>
             Company Members</a>
     </nav>
 </section>
@@ -49,10 +53,10 @@
         </h1>
 
         <p>
-            " You can Record Employee  activities every Day , like overtimes and leave requests "
+            " You can Record Employee activities every Day , like overtimes and leave requests "
         </p>
         <p>
-            " Search the Employee by Employee Code and Fill the blanks  "
+            " Search the Employee by Employee Code and Fill the blanks "
         </p>
     </div>
 </section>
@@ -61,14 +65,18 @@
 <section class="pane-1-members" style="height:100px ">
     <div class="search-part">
 
-        <form class="example">
-            <input type="text" placeholder="Search Employee by ID" name="search">
+        <form class="example" action="DailyRecords" method="post">
+            <input type="text" placeholder="Search Employee by ID" name="employeeNumber" id="employeeNumber">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
 
 
 </section>
+<%
+    Employee employee = (Employee) request.getAttribute("employee");
+    Person person = employee;
+%>
 <section class="pane-1-members,title">
     <div class="search-part">
         <h2>
@@ -76,7 +84,10 @@
         </h2>
 
         <p>
-
+            <%
+                out.print(person.toString() +
+                        employee.toString());
+            %>
         </p>
 
         <br>
@@ -88,7 +99,7 @@
         <br>
 
         <p>
-
+        <%out.print(employee.getJobInformation().toString());%>
         </p>
 
         <br>
@@ -110,7 +121,7 @@
 
         <div class="col-75">
             <div class="container">
-                <form name="IssuanceReceipt" action="">
+                <form name="IssuanceReceipt" action="DailyRecords" method="post">
 
                     <div class="row">
                         <div class="issu">
@@ -118,13 +129,14 @@
 
                             <div class="col-50">
                                 <label for="overtimeStart">Over Time Start </label>
-                                <input style="width: 100px" type="text" id="overtimeStart" name="overtimeStart" placeholder="">
+                                <input style="width: 100px" type="text" id="overtimeStart" name="overtimeStart"
+                                       placeholder="">
                             </div>
                             <div class="col-50">
                                 <label for="overtimeEnd">Over Time End</label>
-                                <input style="width: 100px" type="text" id="overtimeEnd" name="overtimeEnd" placeholder="">
+                                <input style="width: 100px" type="text" id="overtimeEnd" name="overtimeEnd"
+                                       placeholder="">
                             </div>
-
 
 
                             <div class="col-50">
@@ -135,8 +147,6 @@
                                 <label for="RqEnd">Request for leave(End Time)</label>
                                 <input style="width: 100px" type="text" id="RqEnd" name="RqEnd" placeholder="">
                             </div>
-
-
 
 
                         </div>

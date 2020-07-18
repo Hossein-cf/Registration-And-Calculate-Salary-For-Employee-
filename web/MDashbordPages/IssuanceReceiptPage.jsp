@@ -64,8 +64,8 @@
 <section class="pane-1-members" style="height:100px ">
     <div class="search-part">
 
-        <form class="example" >
-            <input type="text" placeholder="Search Employee by ID" name="search">
+        <form class="example" action="IssuanceReceipt" method="post">
+            <input type="text" placeholder="Search Employee by ID" name="employeeNumber" id="employeeNumber">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
@@ -113,7 +113,7 @@
 
             <div class="col-75">
                 <div class="container">
-                    <form  name="IssuanceReceipt" action="">
+                    <form  name="IssuanceReceipt" action="IssuanceReceipt" method="post">
 
                         <div class="row">
                             <div class="issu">

@@ -142,7 +142,7 @@ public class DBHelper {
     public boolean insertDailyRecord(DailyRecords dailyRecords, String EmployeeNumber) {
         isConnectionToTheDB();
         try {
-            String query = "INSERT INTO[dbo].[tblDailyRecord]( [IDEmployee], [WorkTime], [EnterTime], [ExitTime], [OverTimeWork], [StartOverTimeWork], [EndOverTmeWork], [HolidayWorkTime])VALUES('" + getIDEmployee(EmployeeNumber) + "','" + dailyRecords.getWorkTime() + "','" + dailyRecords.getEnterTime() + "','" + dailyRecords.getExitTime() + "','" + dailyRecords.getOverworkTime() + "','" + dailyRecords.getStartOverWorkTime() + "','" + dailyRecords.getEndOverWorkTime() + "','" + dailyRecords.getHolidayWorkTime() + "');";
+            String query = "INSERT INTO[dbo].[tblDailyRecord]( [IDEmployee], [WorkTime], [EnterTime], [ExitTime], [OverTimeWork], [StartOverTimeWork], [EndOverTmeWork], [HolidayWorkTime],[EnterTime1], [ExitTime1], [StartOverTimeWork1], [EndOverTmeWork1])VALUES('" + getIDEmployee(EmployeeNumber) + "','" + dailyRecords.getWorkTime() + "','" + new Time(2,2,2) + "','" + new Time(2,2,2) + "','" + dailyRecords.getOverworkTime() + "','" + new Time(2,2,2) + "','" +new Time(2,2,2) + "','" + dailyRecords.getHolidayWorkTime() + "','" + dailyRecords.getEnterTime() + "','" + dailyRecords.getExitTime() + "','" + dailyRecords.getStartOverWorkTime() + "','"+dailyRecords.getEndOverWorkTime()+"');";
 
             statement.executeUpdate(query);
             isClosedTheDB();
@@ -352,12 +352,12 @@ public class DBHelper {
             while (resultSet.next()) {
                 DailyRecords dailyRecord = new DailyRecords();
 
-                dailyRecord.setEnterTime(LocalDate.parse(resultSet.getString("EnterTime")));
+                dailyRecord.setEnterTime((resultSet.getString("EnterTime1")));
                 dailyRecord.setWorkTime(resultSet.getString("WorkTime"));
-                dailyRecord.setExitTime(LocalDate.parse(resultSet.getString("ExitTime")));
+                dailyRecord.setExitTime((resultSet.getString("ExitTime1")));
                 dailyRecord.setOverworkTime(resultSet.getString("OverTimeWork"));
-                dailyRecord.setStartOverWorkTime(LocalDate.parse(resultSet.getString("StartOverTimeWork")));
-                dailyRecord.setEndOverWorkTime(LocalDate.parse(resultSet.getString("EndOverTmeWork")));
+                dailyRecord.setStartOverWorkTime((resultSet.getString("StartOverTimeWork1")));
+                dailyRecord.setEndOverWorkTime((resultSet.getString("EndOverTmeWork1")));
                 dailyRecord.setHolidayWorkTime(resultSet.getString("HolidayWorkTime"));
                 dailyRecords.add(dailyRecord);
 

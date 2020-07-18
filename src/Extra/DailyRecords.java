@@ -3,14 +3,45 @@ package Extra;
 import java.time.LocalDate;
 
 public class DailyRecords {
-    private String workTime;
-    private LocalDate enterTime;
-    private LocalDate exitTime;
-    private LocalDate StartOverWorkTime;
-    private LocalDate endOverWorkTime;
-    private String overworkTime;
+    private String workTime="0.0";
+    private String enterTime;
+    private String exitTime;
+    private String StartOverWorkTime;
+    private String endOverWorkTime;
+    private String overworkTime="0.0";
     private String holidayWorkTime;
 
+    public String getEnterTime() {
+        return enterTime;
+    }
+
+    public void setEnterTime(String enterTime) {
+        this.enterTime = enterTime;
+    }
+
+    public String getExitTime() {
+        return exitTime;
+    }
+
+    public void setExitTime(String exitTime) {
+        this.exitTime = exitTime;
+    }
+
+    public String getStartOverWorkTime() {
+        return StartOverWorkTime;
+    }
+
+    public void setStartOverWorkTime(String startOverWorkTime) {
+        StartOverWorkTime = startOverWorkTime;
+    }
+
+    public String getEndOverWorkTime() {
+        return endOverWorkTime;
+    }
+
+    public void setEndOverWorkTime(String endOverWorkTime) {
+        this.endOverWorkTime = endOverWorkTime;
+    }
 
     public String getWorkTime() {
         return workTime;
@@ -20,37 +51,6 @@ public class DailyRecords {
         this.workTime = workTime;
     }
 
-    public LocalDate getEnterTime() {
-        return enterTime;
-    }
-
-    public void setEnterTime(LocalDate enterTime) {
-        this.enterTime = enterTime;
-    }
-
-    public LocalDate getExitTime() {
-        return exitTime;
-    }
-
-    public void setExitTime(LocalDate exitTime) {
-        this.exitTime = exitTime;
-    }
-
-    public LocalDate getStartOverWorkTime() {
-        return StartOverWorkTime;
-    }
-
-    public void setStartOverWorkTime(LocalDate startOverWorkTime) {
-        StartOverWorkTime = startOverWorkTime;
-    }
-
-    public LocalDate getEndOverWorkTime() {
-        return endOverWorkTime;
-    }
-
-    public void setEndOverWorkTime(LocalDate endOverWorkTime) {
-        this.endOverWorkTime = endOverWorkTime;
-    }
 
     public String getOverworkTime() {
         return overworkTime;

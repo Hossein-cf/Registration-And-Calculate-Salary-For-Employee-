@@ -13,7 +13,7 @@
 <head>
 
     <title>ManagerDashbord</title>
-    <link rel="stylesheet" href="../ManagerDashbordStyle/css/dashbordStyle.css">
+    <link rel="stylesheet" href="./ManagerDashbordStyle/css/dashbordStyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
@@ -24,11 +24,11 @@
             DashBord
         </a>
 
-        <a class="a-side" href="../EDashbordPages/EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="EmployeeSalaryReceipt.jsp"><i class="fa fa-list-alt fa-2x" aria-hidden="true"></i>
             Salary Receipt
         </a>
 
-        <a class="a-side" href="../EDashbordPages/EmployeeAtendence.jsp"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
+        <a class="a-side" href="EmployeeAtendence.jsp"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i>
             Attendance
         </a>
 
