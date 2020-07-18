@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Extra.GenerateEmployeeNumber" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/16/2020

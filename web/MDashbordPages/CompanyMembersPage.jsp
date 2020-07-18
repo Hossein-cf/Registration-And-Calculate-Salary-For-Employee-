@@ -35,10 +35,10 @@
 <header>
     <div class="search-area">
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a class="active" href="../index.html">Home</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+            <a href="../ManagerLoginJSP.jsp">Log out</a>
         </div>
     </div>
 </header>
@@ -112,7 +112,9 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
+
                         <img src="../ManagerDashbordStyle/pics/DBS.png" alt="Avatar" style="width:300px;height:300px;">
+
                     </div>
                     <div class="flip-card-back">
                         <h1>Numbers of Data Base Expert</h1>

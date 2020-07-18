@@ -1,5 +1,6 @@
 <%@ page import="Extra.employeeTypes.DB_Expert" %>
-<%@ page import="Extra.employeeTypes.Back_End" %><%--
+<%@ page import="Extra.employeeTypes.Back_End" %>
+<%@ page import="Extra.GenerateEmployeeNumber" %><%--
   Created by IntelliJ IDEA.
   User: DARK GHOST
   Date: 7/7/2020
@@ -40,10 +41,10 @@
 <header>
     <div class="search-area">
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a class="active" href="../index.html">Home</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+            <a href="../ManagerLoginJSP.jsp">Log out</a>
         </div>
     </div>
 
@@ -323,7 +324,28 @@
     }
 
 </script>
+<script>
 
+    function nextPrev(n) {
+
+        var x = document.getElementsByClassName("tab");
+
+        if (n === 1 && !validateForm()) return false;
+        x[currentTab].style.display = "none";
+        currentTab = currentTab + n;
+        if (currentTab >= x.length) {
+
+            alert("Employee Code : "+<%= GenerateEmployeeNumber.generateNumber()%>);
+            document.getElementById("regForm").submit();
+
+            return false;
+
+        }
+
+        showTab(currentTab);
+    }
+
+</script>
 
 </body>
 </html>

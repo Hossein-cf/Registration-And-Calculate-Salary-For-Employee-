@@ -35,10 +35,10 @@
 <header>
     <div class="search-area">
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a class="active" href="../index.html">Home</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+            <a href="../ManagerLoginJSP.jsp">Log out</a>
         </div>
     </div>
 </header>
@@ -110,7 +110,7 @@
 
         <div class="col-75">
             <div class="container">
-                <form name="IssuanceReceipt" action="Receipt.jsp">
+                <form name="IssuanceReceipt" action="">
 
                     <div class="row">
                         <div class="issu">
@@ -144,7 +144,7 @@
                     </div>
 
                     <input style="width: 200px;margin-left: 470px;margin-top: 50px" type="submit"
-                           value="Confirm" class="btn">
+                           value="Confirm" class="btn" onclick=alert("Done")>
 
                 </form>
             </div>
