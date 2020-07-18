@@ -154,7 +154,27 @@
                 </div>
 
             </div>
+            <div class="test">
+                <div class="t">
+                    <input style="width: 300px" name="HomePhoneNumber" placeholder="Home Phone Number" type="text"/>
 
+                </div>
+                <div class="t">
+                    <div class="custom-select" style="width:200px;">
+                        <select>
+                            <option value="0">marital status :</option>
+                            <option value="1">Married</option>
+                            <option value="2">Single</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="t">
+
+                    <input style="width: 200px;padding-right: 20px" name="number of children" placeholder="number of Children" type="text"/>
+
+                </div>
+
+            </div>
 
         </div>
 

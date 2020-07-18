@@ -67,7 +67,37 @@
 
 <section class="pane-1">
     <%--    1--%>
+        <div class="col-75">
+            <div class="container">
+                <form name="IssuanceReceipt" action="">
 
+                    <div class="row">
+                        <div class="issu" style="margin-left: 200px">
+
+
+                            <div class="col-50">
+                                <label for="overtimeStart">Enter Start Hour</label>
+                                <input style="width: 100px" type="text" id="overtimeStart" name="overtimeStart" placeholder="just number">
+                            </div>
+
+                            <div class="col-50">
+                                <label for="RqEnd">Enter End Hour</label>
+                                <input style="width: 100px" type="text" id="RqEnd" name="RqEnd" placeholder="just number">
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+                    <input style="width: 200px;margin-left: 470px;margin-top: 50px" type="submit"
+                           value="Confirm" class="btn" onclick=alert("Done")>
+
+                </form>
+            </div>
+        </div>
 
 
 </section>
