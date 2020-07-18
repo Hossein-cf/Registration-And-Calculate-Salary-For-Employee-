@@ -3,14 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-<!--    <servlet>-->
-<!--        <servlet-name>EmployeeLoginServlet</servlet-name>-->
-<!--        <servlet-class>ServletsClasses.EmployeeLoginServlet</servlet-class>-->
-<!--    </servlet>-->
+    <servlet>
+        <servlet-name>RedirectEDashSalary</servlet-name>
+        <servlet-class>ServletsClasses.RedirectEDashSalary</servlet-class>
+    </servlet>
 
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>EmployeeLoginServlet</servlet-name>-->
-<!--        <url-pattern>/EmployeeLoginServlet</url-pattern>-->
-<!--    </servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>RedirectEDashSalary</servlet-name>
+        <url-pattern>/EmployeeSalaryReceipt.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RedirectEDashAtt</servlet-name>
+        <servlet-class>ServletsClasses.RedirectEDashAtt</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RedirectEDashAtt</servlet-name>
+        <url-pattern>/EmployeeAtendence.jsp</url-pattern>
+    </servlet-mapping>
 
 </web-app>
